@@ -744,4 +744,30 @@ a:hover, a:focus {
   }
 }
 
+/* Service Cards Hover Effect */
+.service-card {
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent !important;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+  border: 1px solid #f0f0f0 !important;
+}
+
+.service-card .text-color {
+  display: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.service-card:hover .text-color {
+  display: inline-block;
+}
+
+a.text-dark:hover {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=maps/style.css.map */
