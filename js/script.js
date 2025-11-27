@@ -104,3 +104,61 @@ AOS.init({
 
 
 })(jQuery);
+
+// Contact Form Handler
+$(document).ready(function() {
+    $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+        
+        var name = $('#name').val().trim();
+        var email = $('#email').val().trim();
+        var subject = $('#subject').val().trim();
+        var message = $('#message').val().trim();
+        
+        // Email validation regex
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        // Reset previous messages
+        $('.contact__msg').removeClass('alert-success alert-danger').hide();
+        
+        // Validation
+        if(name === '' || email === '' || subject === '' || message === '') {
+            $('.contact__msg')
+                .removeClass('alert-success')
+                .addClass('alert-danger')
+                .text('Please fill in all fields.')
+                .fadeIn();
+            return false;
+        }
+        
+        if(!emailRegex.test(email)) {
+            $('.contact__msg')
+                .removeClass('alert-success')
+                .addClass('alert-danger')
+                .text('Please enter a valid email address.')
+                .fadeIn();
+            return false;
+        }
+        
+        // Success message (you can integrate with a backend service here)
+        $('.contact__msg')
+            .removeClass('alert-danger')
+            .addClass('alert-success')
+            .text('Thank you for your message! I will get back to you soon.')
+            .fadeIn();
+        
+        // Reset form
+        this.reset();
+        
+        // Optional: Integrate with FormSpree, EmailJS, or your backend
+        // Example with FormSpree:
+        // $.ajax({
+        //     url: 'https://formspree.io/f/YOUR_FORM_ID',
+        //     method: 'POST',
+        //     data: $(this).serialize(),
+        //     dataType: 'json'
+        // });
+        
+        return false;
+    });
+});
