@@ -105,11 +105,12 @@ AOS.init({
 
 })(jQuery);
 
-// Contact Form Handler
+// Contact Form Handler with FormSpree
 $(document).ready(function() {
     $('#contactForm').on('submit', function(e) {
         e.preventDefault();
         
+        var form = $(this);
         var name = $('#name').val().trim();
         var email = $('#email').val().trim();
         var subject = $('#subject').val().trim();
@@ -140,24 +141,39 @@ $(document).ready(function() {
             return false;
         }
         
-        // Success message (you can integrate with a backend service here)
-        $('.contact__msg')
-            .removeClass('alert-danger')
-            .addClass('alert-success')
-            .text('Thank you for your message! I will get back to you soon.')
-            .fadeIn();
+        // Disable submit button
+        $('#submit').prop('disabled', true).val('Sending...');
         
-        // Reset form
-        this.reset();
-        
-        // Optional: Integrate with FormSpree, EmailJS, or your backend
-        // Example with FormSpree:
-        // $.ajax({
-        //     url: 'https://formspree.io/f/YOUR_FORM_ID',
-        //     method: 'POST',
-        //     data: $(this).serialize(),
-        //     dataType: 'json'
-        // });
+        // Send to FormSpree
+        $.ajax({
+            url: form.attr('action'),
+            method: 'POST',
+            data: form.serialize(),
+            dataType: 'json',
+            success: function(response) {
+                $('.contact__msg')
+                    .removeClass('alert-danger')
+                    .addClass('alert-success')
+                    .text('Thank you for your message! I will get back to you soon.')
+                    .fadeIn();
+                
+                // Reset form
+                form[0].reset();
+                
+                // Re-enable button
+                $('#submit').prop('disabled', false).val('Send Message');
+            },
+            error: function(xhr, status, error) {
+                $('.contact__msg')
+                    .removeClass('alert-success')
+                    .addClass('alert-danger')
+                    .text('Oops! There was an error sending your message. Please try again.')
+                    .fadeIn();
+                
+                // Re-enable button
+                $('#submit').prop('disabled', false).val('Send Message');
+            }
+        });
         
         return false;
     });
