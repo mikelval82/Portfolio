@@ -164,6 +164,22 @@
                         </ul>
                     </div>
 
+                    <div class="card bg-gray p-4 mb-4">
+                        <h5 class="mb-3">🎯 PICTURE - Multimodal Machine Learning for Psychological Trait Assessment</h5>
+                        <p class="mb-2">Comprehensive ML pipeline integrating eye-tracking, facial expressions, voice analysis, and behavioural data to evaluate cognitive and emotional traits. The system extracts features from user interactions across multiple activities and trains specialised models for each psychological dimension.</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Multimodal Feature Extraction:</strong> Eye-tracking metrics (AOI visits, fixation patterns, gaze transitions), voice features (pitch, intensity, jitter, shimmer, HNR, speech rate), facial expression analysis, behavioural interaction logs, NLP embeddings from transcripts</li>
+                            <li><strong>Activities Analysed:</strong> Scene 0 (character selection, CV/video interactions), ZOO puzzle (cognitive performance, planning), Asertivity tasks, Presentation scenarios, Interview simulations with 5 personality dimensions (Big Five)</li>
+                            <li><strong>Traits Evaluated:</strong> Critical thinking (F1: 0.640, 80% accuracy), strategic planning, attachment style (embeddings-based), assertiveness, emotional self-regulation, empathy (F1: 0.739, 74% accuracy via presentation ET), Big Five personality traits (N/E/O/A/C)</li>
+                            <li><strong>Machine Learning Models:</strong> RandomForestClassifier, XGBoost, GradientBoosting, AdaBoost, SVC, LogisticRegression, custom neural network for embedding-based classification</li>
+                            <li><strong>Technologies:</strong> Python 3.12, PyTorch, scikit-learn, librosa (audio), RoBERTa (NLP embeddings), Tobii eye-tracking integration, modular feature extraction pipeline</li>
+                            <li><strong>Advanced Features:</strong> Cosine similarity loss for apego (attachment) embeddings, automatic category mapping and normalization, separate voice-based and eye-tracking-based models for trait comparison, fine-tuned sentence transformers for transcript analysis</li>
+                            <li><strong>Data Pipeline:</strong> Standardized user data structure (Activities/, EyeTrackingData/), automated transcript processing, feature consolidation across modalities, model versioning with .pkl serialization</li>
+                            <li><strong>Performance Highlights:</strong> Best results in critical thinking (80% acc), empathy via presentation ET (74% acc), attachment style via NLP embeddings (62% acc), moderate performance on Big Five personality (38-55% acc, 3-class problem)</li>
+                            <li><strong>Innovation:</strong> Holistic approach combining behavioural (interaction logs), physiological (gaze, voice), and linguistic (transcript embeddings) features for robust psychological profiling, modular architecture enabling trait-specific model optimization</li>
+                        </ul>
+                    </div>
+
                     <h3 class="mt-5 mb-4">Technologies and Tools</h3>
                     <div class="row">
                         <div class="col-lg-6">
