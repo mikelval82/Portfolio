@@ -101,6 +101,21 @@
                         </a>
                     </div>
 
+                    <h3 class="mt-5 mb-4">Featured Projects</h3>
+
+                    <div class="card bg-gray p-4 mb-4">
+                        <h5 class="mb-3">🏥 ASISVIA - Intelligent Health Assistant with Voice and AI</h5>
+                        <p class="mb-2">Advanced conversational agent for clinical interviews combining LangGraph, LiveKit, and OpenAI in a robust multi-session architecture. The system conducts structured questionnaires with empathetic voice interaction, featuring automatic follow-up for low-satisfaction responses.</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Architecture:</strong> LangGraph StateGraph with hybrid templated/generative modes, SessionContext for isolated multi-room state management</li>
+                            <li><strong>Technologies:</strong> LiveKit WebRTC (audio streaming), OpenAI GPT-4o-mini (empathetic follow-ups and personalised farewells), Whisper STT, ElevenLabs TTS</li>
+                            <li><strong>Intelligent Workflow:</strong> Automatic detection of low-satisfaction answers (≤2/5) triggering empathetic LLM-generated follow-up questions, switching dynamically between templated (fast, low-cost) and generative modes</li>
+                            <li><strong>Features:</strong> Non-interruptible sessions for structured questionnaires, real-time sentiment analysis, personalised closing summary mentioning key concerns, PostgreSQL checkpoint persistence, concurrent multi-user support</li>
+                            <li><strong>Use Case:</strong> Hospital patient experience surveys, extracting psychological insights whilst maintaining therapeutic rapport</li>
+                            <li><strong>Innovation:</strong> Custom LLM adapter integrating LangGraph with LiveKit, robust participant management with guaranteed cleanup, cost-optimised hybrid approach (templated questions $0 tokens)</li>
+                        </ul>
+                    </div>
+
                     <h3 class="mt-5 mb-4">Work Methodology</h3>
                     <ol class="lead">
                         <li><strong>Requirements Analysis:</strong> Precise identification of problem and project objectives</li>
