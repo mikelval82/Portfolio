@@ -59,11 +59,8 @@
 		<li class="nav-item"><a class="nav-link smoth-scroll" href="#about">About</a></li>
 		<li class="nav-item"><a class="nav-link smoth-scroll" href="#skillbar">Expertise</a></li>
 		<li class="nav-item"><a class="nav-link smoth-scroll" href="#service">Services</a></li>
-		<li class="nav-item"><a class="nav-link smoth-scroll" href="#contact">Contact</a></li>
-		<!-- TODO: Habilitar cuando estén listas
-		<li class="nav-item"><a class="nav-link smoth-scroll" href="#portfolio">portfolio</a></li>
 		<li class="nav-item"><a class="nav-link smoth-scroll" href="#blog">Blog</a></li>
-		 -->
+		<li class="nav-item"><a class="nav-link smoth-scroll" href="#contact">Contact</a></li>
 	</ul>		<ul class="list-inline mb-0 ml-lg-4 nav-social">
 			<li class="list-inline-item"><a href="https://scholar.google.es/citations?user=PoviSYIAAAAJ&hl=es" target="_blank" title="Google Scholar"><i class="ti-book"></i></a></li>
 			<li class="list-inline-item"><a href="https://www.linkedin.com/in/mikel-val-calvo-a2757399/" target="_blank" title="LinkedIn"><i class="ti-linkedin"></i></a></li>
@@ -454,71 +451,66 @@
 
 
 <!-- Blog start -->
-<!--
 <section class="section border-top-1" id="blog" data-aos="fade-up">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-8">
 				<div class="section-title text-center">
-					<span class="text-color mb-0 text-uppercase letter-spacing text-sm"> <i class="ti-minus mr-2"></i>blog news</span>
-					<h1 class="title">Latest Article</h1>
+					<span class="text-color mb-0 text-uppercase letter-spacing text-sm"> <i class="ti-minus mr-2"></i>Technical Blog<i class="ti-minus ml-2"></i></span>
+					<h2 class="title">Open Source & Research</h2>
+					<p class="text-white-50 mt-3">Deep dives into AI systems, neural interfaces, and emotion recognition technologies</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-lg-4 col-md-6">
-				<div class="position-relative blog-item mb-5 mb-lg-0">
-					<img src="images/blog/img1.jpg" alt="blog-1" class="img-fluid">
+		<div class="row justify-content-center">
+			<div class="col-lg-10">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="position-relative blog-item mb-5">
+							<div class="row align-items-center">
+								<div class="col-md-5">
+									<img src="https://raw.githubusercontent.com/mikelval82/Biosignals/master/screenshots/main_window.png" alt="Biosignals software interface" class="img-fluid rounded shadow" onerror="this.src='images/blog/biosignals-placeholder.jpg'">
+								</div>
+								<div class="col-md-7 mt-4 mt-md-0">
+									<div class="blog-item-meta mb-3">
+										<span><i class="ti-calendar mr-2"></i>28 November 2025</span>
+										<span class="text-muted mx-2"> | </span>
+										<span class="text-white-50">8 min read</span>
+										<span class="text-muted mx-2"> | </span>
+										<span class="badge badge-primary">Biosignals</span>
+										<span class="badge badge-primary">PyQt5</span>
+										<span class="badge badge-primary">HRI</span>
+									</div>
 
-					<div class="blog-item-meta mb-3">
-						<span><i class="ti-user mr-2"></i>by Admin</span>
-						<span class="text-muted mx-2"> | </span>
-						<span class="text-white-50">Photography</span>
-					</div>
+									<a href="blog-biosignals.html"><h3 class="mb-3">Biosignals: Real-Time Physiological Signal Acquisition for Emotion Research</h3></a>
+									
+									<p class="text-white-50 mb-4">An open-source Python system for acquiring BVP, GSR, Temperature, and Accelerometer data with TCP/IP synchronisation. Built for emotion recognition research in human-robot interaction experiments.</p>
 
-					<div class="pl-4">
-						<a href="blog-single.html"><h3 class="mb-4 ">20 Best Startup Ideas for Designers</h3></a>
-
-						<a href="blog-single.html" class="learn-more text-uppercase text-sm"><i class="ti-arrow-right mr-2"></i>Learn more</a>
+									<div class="d-flex align-items-center">
+										<a href="blog-biosignals.html" class="btn btn-main btn-sm text-white mr-3"><i class="ti-arrow-right mr-2"></i>Read Article</a>
+										<a href="https://github.com/mikelval82/Biosignals" target="_blank" class="btn btn-outline-primary btn-sm"><i class="ti-github mr-2"></i>View Source</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="position-relative blog-item mb-5 mb-lg-0">
-					<img src="images/blog/img3.jpg" alt="blog-1" class="img-fluid">
 
-					<div class="blog-item-meta mb-3">
-						<span><i class="ti-user mr-2"></i>by Admin</span>
-						<span class="text-muted mx-2"> | </span>
-						<span class="text-white-50">Branding</span>
-					</div>
-					<div class="pl-4">
-						<a href="blog-single.html"><h3 class="mb-4">How to Incorporate Branding into Your Event</h3></a>
-
-						<a href="blog-single.html" class="learn-more text-uppercase text-sm"><i class="ti-arrow-right mr-2 show"></i>Learn more</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<div class="position-relative blog-item mb-5 mb-lg-0">
-					<img src="images/blog/img1.jpg" alt="blog-1" class="img-fluid">
-
-					<div class="blog-item-meta mb-3">
-						<span><i class="ti-user mr-2"></i>by Admin</span>
-						<span class="text-muted mx-2"> | </span>
-						<span class="text-white-50">Marketing</span>
-					</div>
-					<div class="pl-4">
-						<a href="blog-single.html"><h3 class="mb-4 ">The Value of Video in Content Marketing</h3></a>
-						<a href="blog-single.html" class="learn-more text-uppercase text-sm"><i class="ti-arrow-right mr-2"></i>Learn more</a>
+				<!-- Coming Soon Placeholder -->
+				<div class="alert bg-gray border-0 text-center py-4 mt-4">
+					<h5 class="text-white mb-3"><i class="ti-pulse mr-2"></i>More Technical Articles Coming Soon</h5>
+					<p class="text-white-50 mb-3">Deep dives into NeuraViPeR algorithms, EEG artifact removal, and emotion recognition pipelines</p>
+					<div>
+						<span class="badge badge-secondary mr-2">MULTI_GEERT EEG System</span>
+						<span class="badge badge-secondary mr-2">Deep Learning for Neuroprosthetics</span>
+						<span class="badge badge-secondary">Knowledge Graphs for Signal Processing</span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
--->
 <!-- Blog End -->
 
 <!-- Contact start -->

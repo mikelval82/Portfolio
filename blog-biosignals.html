@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Real-time physiological signal acquisition system for emotion recognition research. PyQt5-based software for BVP, GSR, Temperature, and Accelerometer data with EDF format export.">
+  <meta name="keywords" content="biosignals, physiological signals, emotion recognition, EEG, GSR, BVP, heart rate variability, HRV, human-robot interaction, affective computing, Python, PyQt5">
+  <meta name="author" content="Mikel Val Calvo, PhD">
+
+  <title>Biosignals: Real-Time Physiological Data Acquisition for Emotion Research | Mikel Val Calvo</title>
+
+  <!-- Mobile Specific Meta-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Themeify Icon Css -->
+  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="plugins/owl/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="plugins/owl/assets/owl.theme.default.min.css" >
+  <!-- Slick slider CSS -->
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="portfolio" id="top">
+
+<!-- Header Start --> 
+
+<nav class="navbar navbar-expand-lg bg-transprent py-4 fixed-top navigation" id="navbar">
+	<div class="container">
+	  <a class="navbar-brand" href="index.html">
+	  	<h2 class="logo">Mikel Val.</h2>
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="ti-view-list"></span>
+	  </button>
+  
+	  <div class="collapse navbar-collapse text-center" id="navbarsExample09">
+			<ul class="navbar-nav mx-auto">
+			  <li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			  </li>
+			   <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+			   <li class="nav-item"><a class="nav-link" href="index.html#skillbar">Expertise</a></li>
+			   <li class="nav-item"><a class="nav-link" href="index.html#service">Services</a></li>
+			   <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+			   <li class="nav-item active"><a class="nav-link" href="index.html#blog">Blog <span class="sr-only">(current)</span></a></li>
+			   <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+			</ul>
+
+		  	<ul class="list-inline mb-0 ml-lg-4 nav-social">
+			  	<li class="list-inline-item"><a href="https://github.com/mikelval82" target="_blank"><i class="ti-github"></i></a></li>
+			  	<li class="list-inline-item"><a href="https://www.linkedin.com/in/mikelvalcalvo" target="_blank"><i class="ti-linkedin"></i></a></li>
+			  	<li class="list-inline-item"><a href="https://scholar.google.es/citations?user=PoviSYIAAAAJ" target="_blank"><i class="ti-book"></i></a></li>
+		  	</ul>
+	  </div>
+	</div>
+</nav>
+
+
+<section class="page-title bg-gradient">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+          <div class="page-title text-center">
+             <p class="text-white-50">#Biosignals #EmotionRecognition #PhysiologicalSignals #Python</p>
+              <h1 class="text-white">Biosignals: Real-Time Physiological Signal Acquisition for Emotion Research</h1>
+              <p class="text-white-50 mt-3"><i class="ti-calendar mr-2"></i>28 November 2025 | <i class="ti-time ml-3 mr-2"></i>8 min read | <i class="ti-user ml-3 mr-2"></i>Mikel Val Calvo, PhD</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section portfolio-single pt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-md-12">
+                
+                <div class="mb-5">
+                    <img src="https://raw.githubusercontent.com/mikelval82/Biosignals/master/screenshots/main_window.png" alt="Biosignals software interface showing real-time physiological signal monitoring" class="img-fluid rounded shadow-lg" onerror="this.src='images/blog/biosignals-placeholder.jpg'">
+                    <p class="text-center text-muted mt-2 small">Biosignals software interface: Real-time monitoring of BVP, GSR, Temperature, and Accelerometer data</p>
+                </div>
+
+                <h2 class="mb-4">The Challenge: Synchronised Physiological Data for Emotion Recognition</h2>
+
+                <p class="lead">In affective computing and human-robot interaction research, understanding human emotions requires capturing multiple physiological signals simultaneously. However, most commercial solutions are either expensive, closed-source, or lack the precise event synchronisation needed for experimental protocols.</p>
+
+                <p>During my PhD research on <strong>Emotional Human-Robot Interaction Using Physiological Signals</strong>, I needed a flexible system that could:</p>
+
+                <ul class="lead">
+                    <li>Acquire 4 types of biosignals simultaneously (BVP, GSR, Temperature, Accelerometer)</li>
+                    <li>Visualise signals in real-time for experiment monitoring</li>
+                    <li>Synchronise external events (e.g., robot actions, emotional stimuli) with physiological responses</li>
+                    <li>Export data in standardised format (EDF) for post-processing</li>
+                    <li>Allow remote control via TCP/IP for automated experiment workflows</li>
+                </ul>
+
+                <p>Existing solutions required expensive proprietary software or lacked the event-triggering capabilities essential for behavioural experiments. This led to the development of <strong>Biosignals</strong>, an open-source Python application that became the foundation for my emotion recognition research.</p>
+
+                <div class="alert alert-info my-5">
+                    <h5><i class="ti-info-alt mr-2"></i>Research Context</h5>
+                    <p class="mb-0">This software was developed as part of my doctoral research at Universidad Miguel Hernández de Elche, contributing to multiple publications on real-time emotion estimation for human-robot interaction. The system enabled experiments where social robots (NAO) adapted their behaviour based on users' emotional states detected through physiological signals.</p>
+                </div>
+
+                <h2 class="mt-5 mb-4">System Architecture: Multi-Modal Signal Processing</h2>
+
+                <p>Biosignals implements a modular architecture designed for research flexibility:</p>
+
+                <h3 class="h4 mt-4 mb-3">1. Hardware Integration Layer</h3>
+                <p>The software interfaces with <strong>Empatica E4</strong> wristband devices via Bluetooth, acquiring four signal modalities:</p>
+
+                <div class="card bg-gray p-4 mb-4">
+                    <ul class="list-unstyled mb-0">
+                        <li><strong>BVP (Blood Volume Pulse):</strong> Photoplethysmography for heart rate variability (HRV) analysis</li>
+                        <li><strong>GSR (Galvanic Skin Response):</strong> Electrodermal activity for arousal detection</li>
+                        <li><strong>TMP (Temperature):</strong> Skin temperature variations</li>
+                        <li><strong>ACC (3-axis Accelerometer):</strong> Motion artifact detection and activity recognition</li>
+                    </ul>
+                </div>
+
+                <h3 class="h4 mt-4 mb-3">2. Real-Time Visualisation with PyQt5</h3>
+                <p>The GUI provides live plotting of all signals with configurable time windows, enabling researchers to monitor data quality during experiments. The interface uses <strong>matplotlib</strong> embedded in PyQt5 widgets for responsive visualisation even with high-frequency signals (64 Hz for BVP, 32 Hz for ACC).</p>
+
+                <h3 class="h4 mt-4 mb-3">3. Event Synchronisation via TCP/IP</h3>
+                <p>This is where Biosignals truly shines for experimental research. The built-in TCP server allows external applications to send commands:</p>
+
+                <pre class="bg-dark text-white p-4 rounded"><code>import socket
+
+# Connect to Biosignals server
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect(('localhost', 12345))
+
+# Start recording
+client.send(b'start')
+
+# Mark emotional event (e.g., robot shows happiness)
+client.send(b'happy')
+
+# Stop recording
+client.send(b'stop')
+</code></pre>
+
+                <p>Each event is timestamped and embedded into the EDF file, enabling precise alignment of physiological responses with experimental stimuli. This proved essential for training emotion classifiers where timing accuracy is critical.</p>
+
+                <h3 class="h4 mt-4 mb-3">4. EDF Export & Post-Processing Pipeline</h3>
+                <p>Data is saved in <strong>European Data Format (EDF)</strong>, a standard for electrophysiological recordings compatible with:</p>
+                <ul>
+                    <li>EEGLAB/MATLAB for signal processing</li>
+                    <li>Python libraries (mne, pyedflib) for machine learning pipelines</li>
+                    <li>Clinical software for validation studies</li>
+                </ul>
+
+                <h2 class="mt-5 mb-4">Heart Rate Variability Analysis: The Core of Emotion Detection</h2>
+
+                <p>One of the key features is the integrated <strong>HRV module</strong>, which computes time-domain and frequency-domain metrics from BVP signals:</p>
+
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="card bg-light p-3">
+                            <h5 class="text-color">Time-Domain Features</h5>
+                            <ul class="small mb-0">
+                                <li>SDNN (Standard Deviation of NN intervals)</li>
+                                <li>RMSSD (Root Mean Square of Successive Differences)</li>
+                                <li>pNN50 (Percentage of NN50 intervals)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-light p-3">
+                            <h5 class="text-color">Frequency-Domain Features</h5>
+                            <ul class="small mb-0">
+                                <li>LF (Low Frequency: 0.04-0.15 Hz)</li>
+                                <li>HF (High Frequency: 0.15-0.4 Hz)</li>
+                                <li>LF/HF ratio (sympatho-vagal balance)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-4">These features quantify autonomic nervous system activity, providing objective markers of emotional arousal and valence that complemented our facial expression and EEG-based emotion recognition systems.</p>
+
+                <blockquote class="blockquote bg-gray p-5 my-5">
+                    <i class="ti-quote-left mr-3 text-color"></i>
+                    <p class="mb-0">"Combining GSR for arousal detection with HRV for valence estimation achieved 74% accuracy in real-time emotion classification, enabling truly adaptive social robots."</p>
+                    <footer class="blockquote-footer mt-3">From my paper: <cite>Real-Time Multi-Modal Estimation of Dynamically Evoked Emotions</cite></footer>
+                </blockquote>
+
+                <h2 class="mt-5 mb-4">Real-World Application: Affective Robot Storytelling</h2>
+
+                <p>Biosignals was instrumental in our <strong>Affective Robot Story-telling</strong> research, where a NAO robot adapted its narrative delivery based on children's emotional responses:</p>
+
+                <div class="card bg-gradient text-white p-4 my-4">
+                    <h5 class="mb-3">Experimental Workflow</h5>
+                    <ol class="mb-0">
+                        <li class="mb-2"><strong>Baseline Recording:</strong> 2 minutes of resting-state GSR/HRV to establish individual baselines</li>
+                        <li class="mb-2"><strong>Story Presentation:</strong> Robot narrates emotional story segments (happy, sad, scary)</li>
+                        <li class="mb-2"><strong>Real-Time Classification:</strong> Biosignals feeds data to emotion classifier every 5 seconds</li>
+                        <li class="mb-2"><strong>Adaptive Behaviour:</strong> Robot modulates voice tone, gestures, and pacing based on detected emotions</li>
+                        <li class="mb-2"><strong>Post-Processing:</strong> EDF files analysed for correlation between story content and physiological responses</li>
+                    </ol>
+                </div>
+
+                <p>The synchronised event markers allowed us to precisely correlate physiological changes with specific story moments, revealing that GSR peaks occurred 1-2 seconds after emotionally intense narrative points—a finding that informed our classifier's temporal window design.</p>
+
+                <h2 class="mt-5 mb-4">Technical Implementation: Key Design Decisions</h2>
+
+                <h3 class="h5 mt-4 mb-3">Why PyQt5 Over Web-Based Solutions?</h3>
+                <p>While modern approaches might use Electron or web frameworks, PyQt5 was chosen for:</p>
+                <ul>
+                    <li><strong>Low-latency rendering:</strong> Critical for real-time signal visualisation without lag</li>
+                    <li><strong>Native OS integration:</strong> Direct access to serial ports and Bluetooth without browser sandboxing</li>
+                    <li><strong>Offline reliability:</strong> No dependency on internet connectivity during experiments</li>
+                    <li><strong>Python ecosystem:</strong> Seamless integration with scipy, numpy, and scikit-learn for on-the-fly processing</li>
+                </ul>
+
+                <h3 class="h5 mt-4 mb-3">Thread Management for Concurrent I/O</h3>
+                <p>The software uses Qt's threading model to separate:</p>
+                <ul>
+                    <li><strong>Data acquisition thread:</strong> Polls Empatica device at hardware sampling rates</li>
+                    <li><strong>Visualisation thread:</strong> Updates plots at 30 FPS (sufficient for human perception)</li>
+                    <li><strong>Network thread:</strong> Handles TCP connections without blocking signal processing</li>
+                    <li><strong>File I/O thread:</strong> Writes EDF data asynchronously to prevent buffer overflows</li>
+                </ul>
+
+                <h3 class="h5 mt-4 mb-3">EDF Format: Balancing Compatibility and Efficiency</h3>
+                <p>EDF was chosen over CSV or HDF5 because:</p>
+                <ul>
+                    <li>Standard in clinical neurophysiology (interoperable with medical software)</li>
+                    <li>Built-in support for multiple sampling rates per channel</li>
+                    <li>Event annotation format recognised by analysis toolboxes (EEGLAB, FieldTrip)</li>
+                    <li>Compact binary storage (vs. text-based formats)</li>
+                </ul>
+
+                <h2 class="mt-5 mb-4">Lessons Learned & Future Enhancements</h2>
+
+                <h3 class="h5 mt-4 mb-3">What Worked Well</h3>
+                <ul>
+                    <li>✅ <strong>TCP event triggering:</strong> Enabled integration with PsychoPy, Unity, and custom experiment controllers</li>
+                    <li>✅ <strong>Modular architecture:</strong> Easy to add new signal types (e.g., EMG, respiration)</li>
+                    <li>✅ <strong>Open-source GPL-3.0:</strong> Adopted by 3+ research groups for their HRI studies</li>
+                </ul>
+
+                <h3 class="h5 mt-4 mb-3">Trade-offs & Limitations</h3>
+                <ul>
+                    <li>⚠️ <strong>Empatica-specific:</strong> Requires code modifications for other devices (e.g., Shimmer, BITalino)</li>
+                    <li>⚠️ <strong>No cloud sync:</strong> Multi-site studies require manual file sharing</li>
+                    <li>⚠️ <strong>Limited preprocessing:</strong> Filtering/artifact removal done post-experiment</li>
+                </ul>
+
+                <h3 class="h5 mt-4 mb-3">Future Directions</h3>
+                <p>If I were to rebuild this today, I would:</p>
+                <ul>
+                    <li>🔄 Implement plugin system for multi-device support (via abstract base classes)</li>
+                    <li>🔄 Add real-time artifact detection with automatic correction</li>
+                    <li>🔄 Integrate Lab Streaming Layer (LSL) protocol for multi-modal synchronisation with EEG</li>
+                    <li>🔄 Develop RESTful API alongside TCP for web-based experiment platforms</li>
+                </ul>
+
+                <h2 class="mt-5 mb-4">Impact & Publications</h2>
+
+                <p>This software directly contributed to the following peer-reviewed research:</p>
+
+                <div class="card bg-light p-4 mb-3">
+                    <h6 class="text-color mb-2">📄 Real-Time Multi-Modal Estimation of Dynamically Evoked Emotions Using EEG, Heart Rate and Galvanic Skin Response</h6>
+                    <p class="small mb-2"><strong>Authors:</strong> Mikel Val-Calvo et al. | <strong>Journal:</strong> International Journal of Neural Systems (2020)</p>
+                    <p class="small mb-0">Biosignals provided the GSR and HRV features that, combined with EEG, achieved state-of-the-art emotion classification accuracy in dynamic HRI scenarios.</p>
+                    <a href="https://scholar.google.es/citations?view_op=view_citation&hl=es&user=PoviSYIAAAAJ&citation_for_view=PoviSYIAAAAJ:WF5omc3nYNoC" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Publication <i class="ti-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="card bg-light p-4 mb-3">
+                    <h6 class="text-color mb-2">📄 Affective Robot Story-telling Human-Robot Interaction: Exploratory Real-time Emotion Estimation</h6>
+                    <p class="small mb-2"><strong>Conference:</strong> IEEE RO-MAN | <strong>Year:</strong> 2020</p>
+                    <p class="small mb-0">First demonstration of adaptive storytelling based on synchronised physiological and facial expression data, enabled by Biosignals' event triggering system.</p>
+                    <a href="https://scholar.google.es/citations?view_op=view_citation&hl=es&user=PoviSYIAAAAJ&citation_for_view=PoviSYIAAAAJ:ufrVoPGSRksC" target="_blank" class="btn btn-sm btn-outline-primary mt-2">View Publication <i class="ti-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="card bg-light p-4">
+                    <h6 class="text-color mb-2">🎓 PhD Thesis: Emotional Human-Robot Interaction Using Physiological Signals</h6>
+                    <p class="small mb-2"><strong>Institution:</strong> UNED | <strong>Year:</strong> 2021</p>
+                    <p class="small mb-0">Chapter 4 details the Biosignals architecture and its role in multi-modal emotion recognition experiments conducted throughout the thesis.</p>
+                    <a href="https://espacio-pre.uned.es/entities/publication/0e85194e-6187-4e8d-a34c-ca07e5880bd8/full" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Read Thesis <i class="ti-arrow-right ml-1"></i></a>
+                </div>
+
+                <h2 class="mt-5 mb-4">Getting Started with Biosignals</h2>
+
+                <h3 class="h5 mt-4 mb-3">Installation</h3>
+                <pre class="bg-dark text-white p-4 rounded"><code># Clone the repository
+git clone https://github.com/mikelval82/Biosignals.git
+cd Biosignals
+
+# Install dependencies
+pip install PyQt5 numpy scipy matplotlib pyedflib
+
+# Run the application
+python main.py
+</code></pre>
+
+                <h3 class="h5 mt-4 mb-3">Quick Start Guide</h3>
+                <ol>
+                    <li><strong>Connect Empatica E4:</strong> Pair via Bluetooth in your OS settings</li>
+                    <li><strong>Launch Biosignals:</strong> Select device from dropdown menu</li>
+                    <li><strong>Configure experiment:</strong> Set subject ID and output directory</li>
+                    <li><strong>Start recording:</strong> Click "Start" or send TCP command</li>
+                    <li><strong>Monitor signals:</strong> Verify data quality in real-time plots</li>
+                    <li><strong>Trigger events:</strong> Use TCP client to mark experimental conditions</li>
+                    <li><strong>Stop & export:</strong> Data automatically saved in EDF format</li>
+                </ol>
+
+                <div class="alert alert-warning my-4">
+                    <h6><i class="ti-alert mr-2"></i>Note for New Users</h6>
+                    <p class="mb-0">This software was developed for research use with Empatica E4 devices. For other hardware, you'll need to modify the data acquisition module. Check the <code>empatica_client.py</code> file for the device interface implementation.</p>
+                </div>
+
+                <h2 class="mt-5 mb-4">Resources & Community</h2>
+
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100 text-center p-4">
+                            <i class="ti-github text-color" style="font-size: 3rem;"></i>
+                            <h5 class="mt-3 mb-2">Source Code</h5>
+                            <p class="small text-muted mb-3">Explore the full implementation, contribute, or fork for your research</p>
+                            <a href="https://github.com/mikelval82/Biosignals" target="_blank" class="btn btn-primary btn-sm">View on GitHub</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100 text-center p-4">
+                            <i class="ti-book text-color" style="font-size: 3rem;"></i>
+                            <h5 class="mt-3 mb-2">Documentation</h5>
+                            <p class="small text-muted mb-3">README with setup instructions and API reference</p>
+                            <a href="https://github.com/mikelval82/Biosignals#readme" target="_blank" class="btn btn-primary btn-sm">Read Docs</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100 text-center p-4">
+                            <i class="ti-email text-color" style="font-size: 3rem;"></i>
+                            <h5 class="mt-3 mb-2">Questions?</h5>
+                            <p class="small text-muted mb-3">Need help adapting for your research? Let's discuss</p>
+                            <a href="index.html#contact" class="btn btn-primary btn-sm">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="mt-5 mb-4">Related Projects</h2>
+
+                <p>Biosignals is part of a larger ecosystem of tools for physiological computing:</p>
+
+                <ul>
+                    <li><strong>MULTI_GEERT:</strong> EEG acquisition software (companion to Biosignals for brain-body emotion research)</li>
+                    <li><strong>Emotion classifiers:</strong> Machine learning models trained on data acquired with this software</li>
+                    <li><strong>ROS integration:</strong> Bridge nodes for using biosignals in robotic systems</li>
+                </ul>
+
+                <p class="text-muted small">Future blog posts will dive into each of these components. Stay tuned!</p>
+
+                <hr class="my-5">
+
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h5 class="mb-3">About the Author</h5>
+                        <p class="mb-2"><strong>Mikel Val Calvo, PhD</strong></p>
+                        <p class="text-muted small">AI Research Scientist specialising in affective computing, neuroprosthetics, and human-robot interaction. Former researcher at Universidad Miguel Hernández de Elche's NeuraViPeR (H2020) project. Currently developing LLM-powered solutions for digital health at LabLENI-UPV.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="images/about/profile.jpg" alt="Mikel Val Calvo" class="rounded-circle img-fluid mb-3" style="max-width: 150px;" onerror="this.style.display='none'">
+                        <div>
+                            <a href="https://github.com/mikelval82" target="_blank" class="btn btn-sm btn-outline-dark mr-2"><i class="ti-github"></i></a>
+                            <a href="https://www.linkedin.com/in/mikelvalcalvo" target="_blank" class="btn btn-sm btn-outline-dark mr-2"><i class="ti-linkedin"></i></a>
+                            <a href="https://scholar.google.es/citations?user=PoviSYIAAAAJ" target="_blank" class="btn btn-sm btn-outline-dark"><i class="ti-book"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient text-white p-4 my-5">
+                    <h5 class="mb-3"><i class="ti-comments mr-2"></i>Join the Discussion</h5>
+                    <p class="mb-3">Have questions about implementing physiological signal acquisition for your research? Working on similar affective computing projects? I'd love to hear about your use case and help troubleshoot integration challenges.</p>
+                    <a href="index.html#contact" class="btn btn-light">Get in Touch <i class="ti-arrow-right ml-2"></i></a>
+                </div>
+
+                <div class="mt-5 pt-4 border-top">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-muted small mb-2">Tags:</p>
+                            <span class="badge badge-secondary mr-2">Biosignals</span>
+                            <span class="badge badge-secondary mr-2">Emotion Recognition</span>
+                            <span class="badge badge-secondary mr-2">PyQt5</span>
+                            <span class="badge badge-secondary mr-2">HRV</span>
+                            <span class="badge badge-secondary mr-2">GSR</span>
+                            <span class="badge badge-secondary mr-2">Human-Robot Interaction</span>
+                            <span class="badge badge-secondary mr-2">Affective Computing</span>
+                            <span class="badge badge-secondary">Open Source</span>
+                        </div>
+                        <div class="col-md-6 text-md-right mt-3 mt-md-0">
+                            <p class="text-muted small mb-2">Share:</p>
+                            <a href="https://twitter.com/intent/tweet?url=https://mikelval82.github.io/Portfolio/blog-biosignals.html&text=Biosignals: Real-Time Physiological Signal Acquisition" target="_blank" class="btn btn-sm btn-outline-secondary mr-2"><i class="ti-twitter"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://mikelval82.github.io/Portfolio/blog-biosignals.html" target="_blank" class="btn btn-sm btn-outline-secondary mr-2"><i class="ti-linkedin"></i></a>
+                            <a href="mailto:?subject=Interesting article about biosignal acquisition&body=Check out this article: https://mikelval82.github.io/Portfolio/blog-biosignals.html" class="btn btn-sm btn-outline-secondary"><i class="ti-email"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Start -->
+<footer class="footer bg-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<p class="text-center mb-0 copyright text-white-50">© 2025 Mikel Val Calvo. All rights reserved. | AI Research Scientist</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Footer End -->
+
+
+   
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    
+    <!-- Main jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4.3.1 -->
+    <script src="plugins/bootstrap/js/popper.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+   <!-- Slick Slider -->
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <!-- Counterup -->
+    <script src="plugins/counto/apear.js"></script>
+    <script src="plugins/counto/counTo.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <script src="plugins/owl/owl.carousel.min.js"></script>
+    
+    <script src="js/script.js"></script>
+
+  </body>
+  </html>
