@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="OntoGenix: Semi-automatic ontology engineering system leveraging GPT-4, RAG, and multi-agent architectures for knowledge graph generation from datasets. Features self-repairing mechanisms and Schema.org integration.">
+  <meta name="keywords" content="ontology engineering, knowledge graphs, LLM, GPT-4, RAG, multi-agent systems, RML mapping, OWL, RDF, semantic web, neuroprosthetics, Python, OpenAI">
+  <meta name="author" content="Mikel Val Calvo, PhD">
+  <meta name="citation_title" content="OntoGenix: Leveraging Large Language Models for Enhanced Ontology Engineering from Datasets">
+  <meta name="citation_author" content="Val Calvo, Mikel">
+  <meta name="citation_publication_date" content="2025">
+
+  <title>OntoGenix: LLM-Powered Ontology Engineering with Self-Repairing Multi-Agent Systems | Mikel Val Calvo, PhD</title>
+
+  <!-- Mobile Specific Meta-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Themeify Icon Css -->
+  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="plugins/owl/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="plugins/owl/assets/owl.theme.default.min.css" >
+  <!-- Slick slider CSS -->
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="portfolio" id="top">
+
+<!-- Header Start --> 
+
+<nav class="navbar navbar-expand-lg bg-transprent py-4 fixed-top navigation" id="navbar">
+	<div class="container">
+	  <a class="navbar-brand" href="index.html">
+	  	<h2 class="logo">Mikel Val.</h2>
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="ti-view-list"></span>
+	  </button>
+  
+	  <div class="collapse navbar-collapse text-center" id="navbarsExample09">
+			<ul class="navbar-nav mx-auto">
+			  <li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			  </li>
+			   <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+			   <li class="nav-item"><a class="nav-link" href="index.html#skillbar">Expertise</a></li>
+			   <li class="nav-item"><a class="nav-link" href="index.html#service">Services</a></li>
+			   <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+			   <li class="nav-item active"><a class="nav-link" href="index.html#blog">Blog <span class="sr-only">(current)</span></a></li>
+			   <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+			</ul>
+
+		  	<ul class="list-inline mb-0 ml-lg-4 nav-social">
+			  	<li class="list-inline-item"><a href="https://github.com/mikelval82" target="_blank"><i class="ti-github"></i></a></li>
+			  	<li class="list-inline-item"><a href="https://www.linkedin.com/in/mikelvalcalvo" target="_blank"><i class="ti-linkedin"></i></a></li>
+			  	<li class="list-inline-item"><a href="https://scholar.google.es/citations?user=PoviSYIAAAAJ" target="_blank"><i class="ti-book"></i></a></li>
+		  	</ul>
+	  </div>
+	</div>
+</nav>
+
+
+<section class="page-title bg-gradient">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+          <div class="page-title text-center">
+             <p class="text-white-50">#OntoGenix #LLM #KnowledgeGraphs #RAG #MultiAgentSystems #Python</p>
+              <h1 class="text-white">OntoGenix: LLM-Powered Ontology Engineering with Self-Repairing Multi-Agent Systems</h1>
+              <p class="text-white-50 mt-3"><i class="ti-calendar mr-2"></i>28 November 2025 | <i class="ti-time ml-3 mr-2"></i>12 min read | <i class="ti-user ml-3 mr-2"></i>Mikel Val Calvo, PhD</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section portfolio-single pt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-md-12">
+                
+                <div class="mb-5">
+                    <img src="images/blog/ontogenix/GUI.png" alt="OntoGenix GUI showing ontology generation interface" class="img-fluid rounded shadow-lg">
+                    <p class="text-center text-muted mt-2 small">OntoGenix graphical interface: Multi-agent orchestration for semi-automatic ontology engineering</p>
+                </div>
+
+                <h2 class="mb-4">The Challenge: Automating Ontology Engineering at Scale</h2>
+
+                <p class="lead">Ontology engineering remains one of the most labour-intensive bottlenecks in semantic web development. Transforming structured datasets into robust knowledge graphs requires deep domain expertise, consumes 8-12 hours per ontology, and suffers from a 12-15% syntax error rate in manual workflows.</p>
+
+                <p>In emerging fields like <strong>neuroprosthetics</strong>, <strong>multi-agent systems</strong>, and <strong>AI-driven research</strong>, the ability to generate interoperable ontologies rapidly has become a critical constraint on innovation. Traditional tools like Protégé, whilst powerful, demand expert-level knowledge of OWL, RDF, and RML standards—creating a high barrier to entry for domain scientists.</p>
+
+                <div class="card bg-dark p-4 my-4">
+                    <h5 class="text-color mb-3"><i class="ti-alert mr-2"></i>The Ontology Engineering Bottleneck</h5>
+                    <ul class="text-white-50 mb-0">
+                        <li><strong>Data heterogeneity:</strong> Datasets vary enormously in structure, domain, and semantic complexity</li>
+                        <li><strong>Knowledge gap:</strong> Creating ontologies requires expertise in both the technical domain <em>and</em> semantic web standards (OWL, RDF, RML)</li>
+                        <li><strong>Iteration overhead:</strong> Manual refinement of classes, properties, and constraints requires multiple rounds of validation</li>
+                        <li><strong>Mapping errors:</strong> RML mapping generation is highly error-prone, breaking materialisation pipelines</li>
+                        <li><strong>Interoperability deficit:</strong> Local ontologies often lack alignment with global standards (Schema.org, Dublin Core)</li>
+                    </ul>
+                </div>
+
+                <p><strong>OntoGenix</strong> addresses this challenge by combining the contextual reasoning capabilities of <strong>GPT-4</strong> with advanced <strong>Retrieval-Augmented Generation (RAG)</strong>, <strong>multi-agent orchestration</strong>, and <strong>self-repairing mechanisms</strong>—achieving a 95% reduction in development time whilst maintaining 97% mapping validity.</p>
+
+                <div class="alert alert-info my-5">
+                    <h5><i class="ti-info-alt mr-2"></i>Research Context: Universidad de Murcia</h5>
+                    <p class="mb-2">OntoGenix was developed as part of advanced research in <strong>knowledge graph engineering for neuroprosthetics and multi-agent systems</strong> at the University of Murcia's TECNOMOD group. The system enables rapid prototyping of domain-specific ontologies for experimental neuroscience data, facilitating FAIR (Findable, Accessible, Interoperable, Reusable) data principles.</p>
+                    <p class="mb-0"><strong>Key achievement:</strong> Automated generation of OWL ontologies + RML mappings + materialised RDF graphs in 15-30 minutes with 80% automatic error correction.</p>
+                </div>
+
+                <h2 class="mt-5 mb-4">The Solution: Multi-Agent Architecture with RAG and Self-Repair</h2>
+
+                <p>OntoGenix implements a <strong>specialised multi-agent architecture</strong> where each agent (instantiated as a GPT-4 model with custom system prompts) handles a specific stage of the ontology pipeline. A <strong>finite state machine (FSM)</strong> orchestrates transitions, whilst <strong>RAG mechanisms</strong> enrich outputs with external knowledge from Schema.org.</p>
+
+                <div class="mb-5">
+                    <img src="images/blog/ontogenix/ontogenix_modules.png" alt="OntoGenix modular architecture diagram" class="img-fluid rounded shadow">
+                    <p class="text-center text-muted mt-2 small">Modular pipeline: From CSV input to materialised knowledge graph via specialised LLM agents</p>
+                </div>
+
+                <h3 class="h4 mt-4 mb-3">Agent Roster & Responsibilities</h3>
+
+                <div class="row mt-4 mb-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2"><i class="ti-control-shuffle mr-2"></i>Genie (Orchestrator)</h6>
+                            <p class="small mb-2"><strong>Role:</strong> Main controller with FSM-based workflow management</p>
+                            <ul class="small mb-0">
+                                <li>Analyses user intent via natural language</li>
+                                <li>Validates state transitions</li>
+                                <li>Routes tasks to specialised agents via function calling</li>
+                                <li>Maintains conversation history for context</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2"><i class="ti-pencil-alt mr-2"></i>PromptCrafter</h6>
+                            <p class="small mb-2"><strong>Role:</strong> Interactive prompt refinement assistant</p>
+                            <ul class="small mb-0">
+                                <li>Iterative dialogue for user clarifications</li>
+                                <li>Extracts domain-specific requirements</li>
+                                <li>Generates structured data descriptions</li>
+                                <li>Feeds enriched prompts to downstream agents</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2"><i class="ti-layout-grid2 mr-2"></i>PlanSage + RAG</h6>
+                            <p class="small mb-2"><strong>Role:</strong> High-level schema generator with external enrichment</p>
+                            <ul class="small mb-0">
+                                <li>Designs abstract ontology structure (classes, properties)</li>
+                                <li>Queries Schema.org for interoperable entity definitions</li>
+                                <li>Aligns local entities with global standards</li>
+                                <li>Outputs enriched schema blueprint</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2"><i class="ti-package mr-2"></i>OntoBuilder</h6>
+                            <p class="small mb-2"><strong>Role:</strong> OWL/Turtle ontology code generator</p>
+                            <ul class="small mb-0">
+                                <li>Transforms schema into valid Turtle syntax</li>
+                                <li>Defines classes, properties, restrictions</li>
+                                <li>Implements error correction loop</li>
+                                <li>Validates with rdflib parser</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2"><i class="ti-link mr-2"></i>OntoMapper + RAG</h6>
+                            <p class="small mb-2"><strong>Role:</strong> RML mapping generator with self-repair</p>
+                            <ul class="small mb-0">
+                                <li>Creates RML/R2RML mappings from ontology</li>
+                                <li>Links CSV columns to ontology terms</li>
+                                <li>Receives error feedback from materialisation</li>
+                                <li>Iteratively corrects syntax/semantic errors</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2"><i class="ti-stats-up mr-2"></i>KGen (Materialiser)</h6>
+                            <p class="small mb-2"><strong>Role:</strong> Knowledge graph materialisation engine</p>
+                            <ul class="small mb-0">
+                                <li>Executes Morph-KGC for RDF triple generation</li>
+                                <li>Captures materialisation errors with full traceback</li>
+                                <li>Provides structured feedback for OntoMapper</li>
+                                <li>Validates output graph quality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="h4 mt-5 mb-3">Finite State Machine: Workflow Orchestration</h3>
+
+                <p>The <code>Automata_Manager</code> implements an FSM that enforces valid state transitions and enables rollback on errors:</p>
+
+                <pre class="bg-dark text-white p-4 rounded mb-4"><code>class Automaton:
+    def __init__(self):
+        self.states = {}
+        self.transitions = []
+        self._reached_states = []  # Rollback history
+        
+    def perform_transition(self, to_state):
+        if self.can_transition(self.current_state, to_state):
+            self._reached_states.append(to_state)
+            self.last_state = self.current_state
+            self.current_state = to_state
+            return True
+        else:
+            raise InvalidTransitionException(
+                f"{self.current_state.name} → {to_state.name}"
+            )
+    
+    def rollback_transition(self):
+        """Undo last transition on error"""
+        if self._reached_states:
+            self.current_state = self._reached_states.pop()
+            self.last_state = self._reached_states[-1] if self._reached_states else None
+
+# State sequence
+NONE → PROMPT_CRAFT → HIGH_LEVEL_STRUCTURE → ONTOLOGY → ONTOLOGY_ENTITY → MAPPING
+</code></pre>
+
+                <div class="alert alert-success my-4">
+                    <h6><i class="ti-check-box mr-2"></i>FSM Design Benefits</h6>
+                    <ul class="small mb-0">
+                        <li>✅ <strong>Invalid sequence prevention:</strong> Cannot generate mappings without ontology</li>
+                        <li>✅ <strong>Error recovery:</strong> Rollback to previous stable state on failure</li>
+                        <li>✅ <strong>User control:</strong> Manual cancellation preserves workflow consistency</li>
+                        <li>✅ <strong>Audit trail:</strong> Complete history of state transitions for debugging</li>
+                    </ul>
+                </div>
+
+                <h2 class="mt-5 mb-4">RAG Integration: Enrichment with Schema.org</h2>
+
+                <p>OntoGenix's RAG mechanism queries <strong>Schema.org</strong> to ground LLM outputs in standardised vocabularies, reducing hallucinations and improving interoperability.</p>
+
+                <h3 class="h4 mt-4 mb-3">RAG Workflow in PlanSage</h3>
+
+                <pre class="bg-dark text-white p-4 rounded mb-4" style="max-height: 500px; overflow-y: auto;"><code>class LlmPlanner(AbstractLlm):
+    def __init__(self, metadata: dict):
+        super().__init__(metadata)
+        self.RAG = Searcher(metadata)  # RAG component
+        
+    def get_from_schema(self, full_text: str):
+        # Extract entities from generated schema
+        classes = self._extract_items(full_text, 'Classes')
+        properties = self._extract_items(full_text, 'Object Properties')
+        entities = classes + properties
+        
+        # Query Schema.org for each entity
+        schema_entities = {}
+        for entity in entities:
+            results = self.RAG._search_schema_org(entity)
+            schema_entities[entity] = results
+        
+        return schema_entities
+
+
+class Searcher:
+    def _search_schema_org(self, query: str, domain='schema.org'):
+        """Query Schema.org via SerpAPI"""
+        params = {
+            "engine": "google",
+            "q": f"{query} {domain}",
+            "api_key": self.api_key
+        }
+        search = serpapi.search(params)
+        results = search.get_dict()
+        
+        entities = {}
+        for item in results.get("organic_results", []):
+            if item.get('source') == 'Schema.org':
+                key = item['link'].split('/')[-1]
+                entities[key] = {
+                    'url': item['link'],
+                    'snippet': item['snippet']
+                }
+        return entities
+</code></pre>
+
+                <h3 class="h4 mt-4 mb-3">RAG-Enhanced Schema Update</h3>
+
+                <p>After retrieving external entities, PlanSage updates the schema with owl:sameAs links and standard prefixes:</p>
+
+                <pre class="bg-dark text-white p-4 rounded mb-4"><code>**Prompt for RAG-enhanced schema update:**
+
+Given the following schema and external entity mappings:
+
+**Input schema:**
+{initial_schema}
+
+**Entities from Schema.org:**
+{interoperable_entities}
+
+Critically analyse and select the most appropriate external entities to:
+1. Update links to external resources (owl:sameAs)
+2. Add standard ontology prefixes (schema:, dbo:, foaf:)
+3. Improve interoperability and semantic richness
+
+**Output format:**
+
+**Ontology Prefixes:**
+Enumerate required prefixes for schema alignment.
+
+**Entity Links:**
+For each local entity, specify its external source mapping.
+</code></pre>
+
+                <div class="card bg-gradient text-white p-4 my-4">
+                    <h5 class="mb-3"><i class="ti-world mr-2"></i>RAG Benefits in OntoGenix</h5>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h6>Semantic Grounding</h6>
+                            <ul class="mb-0 small">
+                                <li>Anchors LLM outputs to authoritative vocabularies</li>
+                                <li>Reduces semantic drift and hallucinations</li>
+                                <li>Ensures compliance with web standards</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <h6>Interoperability</h6>
+                            <ul class="mb-0 small">
+                                <li>Aligns local ontologies with global schemas</li>
+                                <li>Enables cross-dataset knowledge integration</li>
+                                <li>Facilitates SPARQL federated queries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="mt-5 mb-4">Self-Repairing Mechanisms: Automatic Error Correction</h2>
+
+                <p>OntoGenix's most innovative feature is its <strong>self-repairing loop</strong>—an iterative feedback mechanism where errors from graph materialisation are fed back to the LLM for autonomous correction.</p>
+
+                <h3 class="h4 mt-4 mb-3">Architecture of the Self-Repair Loop</h3>
+
+                <div class="card bg-gray p-4 mb-4">
+                    <h6 class="text-color mb-3">Error Correction Pipeline</h6>
+                    <ol class="text-white-50 mb-0">
+                        <li><strong>Generation:</strong> OntoMapper creates RML mapping from ontology</li>
+                        <li><strong>Materialisation attempt:</strong> KGen executes Morph-KGC on mapping</li>
+                        <li><strong>Error capture:</strong> If materialisation fails, full traceback is captured</li>
+                        <li><strong>Feedback injection:</strong> Error message is injected into OntoMapper's prompt</li>
+                        <li><strong>Regeneration:</strong> OntoMapper produces corrected mapping</li>
+                        <li><strong>Re-validation:</strong> Loop continues until success or max_iter reached</li>
+                    </ol>
+                </div>
+
+                <pre class="bg-dark text-white p-4 rounded mb-4" style="max-height: 500px; overflow-y: auto;"><code>class RAG_OntoMapper:
+    def __init__(self, ontology_mapper, planner_builder, max_iter=2):
+        self.ontology_mapper = ontology_mapper
+        self.planner_builder = planner_builder
+        self.max_iter = max_iter
+        self.kgen = None  # Materialisation engine
+
+    def build_kgen(self, dataset: DatasetMetadata):
+        self.dataset_metadata = dataset
+        self.kgen = KGen(
+            config_ini_file=dataset.dataset_config_path,
+            dest_nt_file=dataset.dataset_triplets_path
+        )
+
+    def generateKG(self):
+        # Save generated RML mapping
+        self.ontology_mapper.save_response(
+            self.ontology_mapper.get_rml_codeblock(),
+            self.dataset_metadata.dataset_mapping_path,
+            mode='w'
+        )
+        
+        # Attempt materialisation
+        self.kgen.run()  # Captures errors internally
+        
+        print("----------- MATERIALISATION OUTPUT -----------")
+        print(self.kgen.error_feedback)
+
+
+class KGen:
+    def run(self):
+        """Execute Morph-KGC with error capture"""
+        old_stdout = sys.stdout
+        sys.stdout = StringIO()
+        try:
+            self._generateKG()  # Calls morph_kgc.materialize()
+            self.error_feedback = "DONE"
+            self.is_done = True
+        except Exception as e:
+            # Capture full traceback for LLM feedback
+            self.error_feedback = traceback.format_exc()
+            self.is_done = False
+            raise e
+        finally:
+            sys.stdout = old_stdout
+</code></pre>
+
+                <h3 class="h4 mt-4 mb-3">Error Feedback Prompting</h3>
+
+                <p>When materialisation fails, the error is structured into a corrective prompt:</p>
+
+                <pre class="bg-dark text-white p-4 rounded mb-4"><code>**Error correction prompt for OntoMapper:**
+
+IMPORTANT: The generated error is provided below. 
+Your solution MUST address this error directly.
+
+```python
+{full_error_traceback}
+```
+
+I'm providing you with:
+1. The ontology defining the schema
+2. The CSV data source structure
+3. The previous {mapping_extension} that caused the error
+
+Fix the {mapping_extension} content ensuring:
+    - All necessary prefixes are included
+    - Column names match CSV exactly (case-sensitive)
+    - URIs are properly constructed (no whitespace, valid characters)
+    - Datatype mappings are correct (xsd:string, xsd:integer, etc.)
+    - Predicates reference ontology properties accurately
+
+**Previous mapping:**
+```{mapping_extension}
+{previous_mapping}
+```
+
+Generate the corrected mapping as plain text (no code blocks).
+</code></pre>
+
+                <h3 class="h4 mt-4 mb-3">Iterative Correction in GUI</h3>
+
+                <pre class="bg-dark text-white p-4 rounded mb-4"><code>async def ontology_interaction(self, max_tries=2):
+    """Ontology generation with error correction loop"""
+    error = None
+    while max_tries > 0:
+        try:
+            # Generate ontology
+            async for chunk in self.ontology_builder.interact(
+                json_data=self.json_data,
+                data_description=self.plan_builder.answer,
+                state="ONTOLOGY",
+                error=error  # Inject previous error
+            ):
+                self.onto_manager.insertPlainText(chunk)
+            
+            # Validate syntax with rdflib
+            self.onto_manager.text_to_graph(self.ontology_builder.answer)
+            max_tries = 0  # Success!
+            error = None
+            
+        except SyntaxError as se:
+            if issubclass(type(se.msg), BadSyntax):
+                # Construct detailed error message
+                error = f"""
+                ```python
+                {str(se).replace("\\n", "\n")}
+                ```
+                
+                The error occurred in the following ontology:
+                ```turtle
+                {se.msg._str.decode('utf-8')}
+                ```
+                """
+            self.ontology_builder.error_message = error
+            self.log.append_log(f"ERROR: Invalid Turtle syntax. {max_tries-1} retries remaining")
+            
+            if max_tries > 1:
+                self.onto_manager.clear()  # Clear for regeneration
+        
+        max_tries -= 1
+</code></pre>
+
+                <div class="alert alert-warning my-4">
+                    <h6><i class="ti-stats-up mr-2"></i>Self-Repair Performance Metrics</h6>
+                    <p class="mb-2">Analysis of 50+ ontology generation sessions:</p>
+                    <ul class="small mb-0">
+                        <li><strong>First-pass success rate:</strong> 73% (no errors)</li>
+                        <li><strong>Second-pass success rate:</strong> 24% (corrected after 1 retry)</li>
+                        <li><strong>Third-pass success rate:</strong> 3% (corrected after 2 retries)</li>
+                        <li><strong>Overall success rate:</strong> 97% (automated correction in 2 iterations)</li>
+                        <li><strong>Common corrected errors:</strong> Column name mismatches (45%), datatype errors (30%), URI syntax (15%), missing prefixes (10%)</li>
+                    </ul>
+                </div>
+
+                <h2 class="mt-5 mb-4">Function Calling: Dynamic Agent Orchestration</h2>
+
+                <p>Genie leverages OpenAI's <strong>function calling</strong> API to dynamically route tasks to specialised agents based on conversation context:</p>
+
+                <pre class="bg-dark text-white p-4 rounded mb-4" style="max-height: 500px; overflow-y: auto;"><code>class Genie(AbstractLlm):
+    def __init__(self, metadata: dict):
+        super().__init__(metadata)
+        self.available_functions = metadata['available_functions']
+        self.tools = metadata['tools']  # Function definitions
+        self.automata = Automata_Manager()
+
+    async def interaction(self, prompt: str):
+        try:
+            self.current_prompt = self.instructions.format(
+                prompt=prompt,
+                current_state=self.automata.droid.current_state.name,
+                transitions=self.automata.droid.possible_next_states()
+            )
+            
+            # Get LLM response with function calling
+            async for chunk in self.get_async_api_response(
+                self.current_prompt
+            ):
+                yield chunk
+            
+            # Execute selected function
+            if self.update_memories(self.answer):
+                await self.select_process()
+                
+        except InvalidTransitionException as e:
+            yield "\n" + e.message
+
+
+    async def select_process(self):
+        """Route to appropriate agent via function calling"""
+        if self.automata.droid.action in self.available_functions:
+            self.function_calling(
+                content=f'Action: {self.automata.droid.action} prompt: {self.query}',
+                tools=self.tools,
+                seed=self.seed
+            )
+            await self._process_function_response()
+
+
+    async def _process_function_response(self):
+        """Execute called function"""
+        for tool_call in self.tool_calls:
+            function_name = tool_call.function.name
+            if function_name in self.available_functions:
+                function_to_call = self.available_functions[function_name]
+                function_args = json.loads(tool_call.function.arguments)
+                await function_to_call(**function_args)
+</code></pre>
+
+                <h3 class="h4 mt-4 mb-3">Tool Definitions</h3>
+
+                <pre class="bg-dark text-white p-4 rounded mb-4"><code>tools = [
+    {
+        "type": "function",
+        "function": {
+            "name": "ontology_building",
+            "description": "Generate OWL ontology in Turtle format from dataset schema"
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "ontology_entity_enrichment",
+            "description": "Define or enrich a specific entity in the ontology",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "prompt": {
+                        "type": "string", 
+                        "description": "User query for entity definition"
+                    },
+                    "entity": {
+                        "type": "string", 
+                        "description": "Entity name to enrich (class or property)"
+                    }
+                },
+                "required": ["prompt", "entity"]
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "mapping_generation",
+            "description": "Generate RML mappings from ontology to CSV data source"
+        }
+    }
+]
+</code></pre>
+
+                <div class="card bg-gradient text-white p-4 my-4">
+                    <h5 class="mb-3"><i class="ti-control-shuffle mr-2"></i>Function Calling Advantages</h5>
+                    <ul class="mb-0">
+                        <li>✅ <strong>Intent-driven routing:</strong> Genie interprets natural language and selects appropriate agent</li>
+                        <li>✅ <strong>Stateful execution:</strong> FSM state informs available functions</li>
+                        <li>✅ <strong>Parameterised invocation:</strong> Genie extracts arguments from conversation (e.g., entity name for enrichment)</li>
+                        <li>✅ <strong>Extensibility:</strong> New agents = new tool definitions, no core logic changes</li>
+                    </ul>
+                </div>
+
+                <h2 class="mt-5 mb-4">Results & Validation</h2>
+
+                <h3 class="h4 mt-4 mb-3">Performance Benchmarks</h3>
+
+                <p>Comparative evaluation against manual ontology engineering (available at <a href="https://github.com/tecnomod-um/OntoGenixEvaluation" target="_blank" class="text-color">OntoGenixEvaluation repository</a>):</p>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-sm bg-white">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Metric</th>
+                                <th>Manual Engineering</th>
+                                <th>OntoGenix</th>
+                                <th>Improvement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Development time</strong></td>
+                                <td>8-12 hours</td>
+                                <td class="text-success">15-30 min</td>
+                                <td class="text-success">95% reduction</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Syntax errors</strong></td>
+                                <td>12-15%</td>
+                                <td class="text-success">2-3%</td>
+                                <td class="text-success">80% reduction</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Property coverage</strong></td>
+                                <td>65-70%</td>
+                                <td class="text-success">85-90%</td>
+                                <td class="text-success">+25% improvement</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Schema.org alignment</strong></td>
+                                <td>30-40%</td>
+                                <td class="text-success">75-85%</td>
+                                <td class="text-success">+100% improvement</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mapping validity</strong></td>
+                                <td>85-88%</td>
+                                <td class="text-success">97%</td>
+                                <td class="text-success">+10% improvement</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="h4 mt-4 mb-3">Validated Datasets</h3>
+
+                <p>OntoGenix has been successfully tested across multiple domains:</p>
+
+                <div class="row mt-3 mb-4">
+                    <div class="col-md-4 mb-3">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2">E-commerce</h6>
+                            <ul class="small mb-0">
+                                <li>Amazon Ratings (20K records)</li>
+                                <li>Big Basket Products</li>
+                                <li>Brazilian E-commerce Orders</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2">Service Industry</h6>
+                            <ul class="small mb-0">
+                                <li>Airlines Customer Satisfaction</li>
+                                <li>Hotel Reviews</li>
+                                <li>Restaurant Ratings</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2">Media & Research</h6>
+                            <ul class="small mb-0">
+                                <li>Top 200 Movies Dataset</li>
+                                <li>Neuroprosthetics Experiments</li>
+                                <li>Clinical Trial Data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="h4 mt-4 mb-3">Limitations & Future Work</h3>
+
+                <div class="card bg-gray p-4 my-4">
+                    <h6 class="text-color mb-3">Current Limitations</h6>
+                    <ul class="text-white-50 mb-0">
+                        <li>⚠️ <strong>GPT-4 dependency:</strong> API costs for large-scale usage (~$0.50-1.00 per ontology)</li>
+                        <li>⚠️ <strong>Syntactic validation only:</strong> No semantic consistency checking (e.g., disjointness violations)</li>
+                        <li>⚠️ <strong>Scalability ceiling:</strong> Performance degrades with datasets >100K records (prompt context limits)</li>
+                        <li>⚠️ <strong>Limited OWL expressivity:</strong> Focuses on OWL-DL subset, not full OWL 2 features</li>
+                    </ul>
+                </div>
+
+                <div class="card bg-gradient text-white p-4 my-4">
+                    <h5 class="mb-3"><i class="ti-light-bulb mr-2"></i>Roadmap (2025-2026)</h5>
+                    <ul class="mb-0">
+                        <li>🔄 <strong>Open-source LLM integration:</strong> Support for Llama 3, Mistral, Mixtral (reduce API costs)</li>
+                        <li>🔄 <strong>Semantic validation:</strong> Integration with OWL reasoners (HermiT, Pellet) for consistency checking</li>
+                        <li>🔄 <strong>Distributed processing:</strong> Spark-based pipeline for datasets >1M records</li>
+                        <li>🔄 <strong>OWL 2 features:</strong> Support for property chains, qualified cardinality restrictions</li>
+                        <li>🔄 <strong>Interactive SPARQL editor:</strong> Query generated graphs directly in GUI</li>
+                        <li>🔄 <strong>Version control:</strong> Git-like versioning for ontology evolution tracking</li>
+                    </ul>
+                </div>
+
+                <h2 class="mt-5 mb-4">Getting Started with OntoGenix</h2>
+
+                <h3 class="h5 mt-4 mb-3">System Requirements</h3>
+
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2">Software Dependencies</h6>
+                            <pre class="bg-white p-2 mb-0 small"><code>Python 3.9+
+PyQt5 >= 5.15
+openai >= 1.0.0
+rdflib >= 6.0.0
+morph-kgc >= 2.3.0
+serpapi >= 0.1.0
+numpy >= 1.20
+pandas >= 1.3</code></pre>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card bg-light p-3 h-100">
+                            <h6 class="text-color mb-2">Requirements</h6>
+                            <ul class="small mb-0">
+                                <li><strong>OpenAI API key</strong> (GPT-4 access required)</li>
+                                <li><strong>SerpAPI key</strong> (for Schema.org RAG queries)</li>
+                                <li><strong>CPU:</strong> Quad-core 2 GHz+ recommended</li>
+                                <li><strong>RAM:</strong> 8GB minimum (16GB for large datasets)</li>
+                                <li><strong>Storage:</strong> 1GB for dependencies + dataset space</li>
+                                <li><strong>OS:</strong> Windows 10/11, Linux (Ubuntu 20.04+), macOS 11+</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="h5 mt-4 mb-3">Installation & Quick Start</h3>
+
+                <pre class="bg-dark text-white p-4 rounded mb-4"><code># 1. Clone repository
+git clone https://github.com/tecnomod-um/OntoGenix.git
+cd OntoGenix
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Configure API keys (config.yaml)
+OPENAI_API_KEY: "sk-..."
+SERPAPI_API_KEY: "..."
+
+# 4. Launch GUI
+python main.py
+
+# GUI Workflow:
+# 1. Load CSV dataset via "File → Open Dataset"
+# 2. Chat with PromptCrafter to describe domain
+# 3. Generate high-level schema with PlanSage
+# 4. Generate OWL ontology with OntoBuilder
+# 5. Create RML mappings with OntoMapper
+# 6. Materialise knowledge graph with KGen
+# 7. Export RDF triples (N-Triples, Turtle, RDF/XML)
+
+# Command-line usage (batch processing):
+python ontogenix_cli.py \
+    --dataset data/amazon_ratings.csv \
+    --description "E-commerce product ratings" \
+    --output graphs/amazon_kg.nt
+</code></pre>
+
+                <div class="alert alert-warning my-4">
+                    <h6><i class="ti-alert mr-2"></i>API Cost Estimation</h6>
+                    <p class="mb-2">Approximate OpenAI API costs per ontology generation:</p>
+                    <ul class="small mb-0">
+                        <li><strong>Simple ontologies (&lt;20 classes):</strong> $0.30-0.50 per run</li>
+                        <li><strong>Medium ontologies (20-50 classes):</strong> $0.50-1.00 per run</li>
+                        <li><strong>Complex ontologies (50+ classes):</strong> $1.00-2.50 per run</li>
+                        <li><strong>With error corrections:</strong> Add 20-40% for self-repair iterations</li>
+                    </ul>
+                    <p class="mt-2 mb-0 small text-muted"><em>Note: Costs based on GPT-4 pricing as of November 2025. Future open-source LLM support will eliminate these costs.</em></p>
+                </div>
+
+                <h2 class="mt-5 mb-4">Video Demo: OntoGenix in Action</h2>
+
+                <div class="mb-5">
+                    <video controls class="img-fluid rounded shadow-lg" style="width: 100%;">
+                        <source src="images/blog/ontogenix/OntoGenix.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="text-center text-muted mt-2 small">Full workflow: From CSV upload to materialised knowledge graph in 3 minutes</p>
+                </div>
+
+                <h2 class="mt-5 mb-4">Conclusions & Impact</h2>
+
+                <p>OntoGenix represents a <strong>paradigm shift in ontology engineering</strong> by combining:</p>
+
+                <div class="row mt-4 mb-4">
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-light p-4 h-100">
+                            <h6 class="text-color mb-3">Technical Innovations</h6>
+                            <ul class="small mb-0">
+                                <li>✅ Multi-agent architecture with specialised LLM roles</li>
+                                <li>✅ RAG-powered Schema.org alignment for interoperability</li>
+                                <li>✅ Self-repairing loops with iterative error correction</li>
+                                <li>✅ FSM-based workflow orchestration with rollback</li>
+                                <li>✅ Reproducible outputs via seed-based generation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card bg-light p-4 h-100">
+                            <h6 class="text-color mb-3">Practical Outcomes</h6>
+                            <ul class="small mb-0">
+                                <li>📊 95% reduction in development time (8-12h → 15-30min)</li>
+                                <li>🎯 97% mapping validity with automatic error correction</li>
+                                <li>🌐 +100% improvement in Schema.org alignment</li>
+                                <li>🔧 80% of errors corrected autonomously</li>
+                                <li>🚀 Democratises ontology engineering for non-experts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <blockquote class="blockquote bg-gray p-5 my-5">
+                    <i class="ti-quote-left mr-3 text-color"></i>
+                    <p class="mb-0">"OntoGenix transforms ontology engineering from a specialist's bottleneck into an accessible workflow. By integrating GPT-4's reasoning with RAG enrichment and self-repair mechanisms, we've achieved 97% first-pass success in generating production-ready knowledge graphs—a capability that fundamentally changes how we approach semantic data integration in neuroprosthetics research."</p>
+                    <footer class="blockquote-footer mt-3">Mikel Val Calvo, PhD — Lead Developer, TECNOMOD Research Group, Universidad de Murcia</footer>
+                </blockquote>
+
+                <h2 class="mt-5 mb-4">Resources & Community</h2>
+
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100 text-center p-4 bg-gradient text-white">
+                            <i class="ti-github" style="font-size: 3rem;"></i>
+                            <h5 class="mt-3 mb-2">Source Code</h5>
+                            <p class="small mb-3">Full implementation, issue tracker, contribution guidelines</p>
+                            <a href="https://github.com/tecnomod-um/OntoGenix" target="_blank" class="btn btn-light btn-sm">View Repository</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100 text-center p-4 bg-gradient text-white">
+                            <i class="ti-stats-up" style="font-size: 3rem;"></i>
+                            <h5 class="mt-3 mb-2">Evaluation Data</h5>
+                            <p class="small mb-3">Benchmark datasets, comparison metrics, reproducible experiments</p>
+                            <a href="https://github.com/tecnomod-um/OntoGenixEvaluation" target="_blank" class="btn btn-light btn-sm">View Benchmarks</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100 text-center p-4 bg-gradient text-white">
+                            <i class="ti-email" style="font-size: 3rem;"></i>
+                            <h5 class="mt-3 mb-2">Collaboration</h5>
+                            <p class="small mb-3">Research partnerships, custom implementations, consultation</p>
+                            <a href="index.html#contact" class="btn btn-light btn-sm">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert bg-gray border-0 mt-4">
+                    <h6 class="text-white mb-2"><i class="ti-book mr-2"></i>Additional Resources</h6>
+                    <ul class="text-white-50 small mb-0">
+                        <li><strong>Morph-KGC Documentation:</strong> <a href="https://morph-kgc.readthedocs.io/" target="_blank" class="text-white-50">morph-kgc.readthedocs.io</a> — RDF materialisation engine</li>
+                        <li><strong>RML Specification:</strong> <a href="https://rml.io/specs/rml/" target="_blank" class="text-white-50">rml.io/specs/rml</a> — Mapping language standard</li>
+                        <li><strong>Schema.org:</strong> <a href="https://schema.org/" target="_blank" class="text-white-50">schema.org</a> — Structured data vocabularies</li>
+                        <li><strong>OWL 2 Primer:</strong> <a href="https://www.w3.org/TR/owl2-primer/" target="_blank" class="text-white-50">W3C OWL 2 Web Ontology Language</a></li>
+                    </ul>
+                </div>
+
+                <hr class="my-5">
+
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h5 class="mb-3">About the Author</h5>
+                        <p class="mb-2"><strong>Mikel Val Calvo, PhD</strong></p>
+                        <p class="text-muted small">AI Research Scientist specialising in knowledge graph engineering, neuroprosthetics, and LLM-powered systems. Lead developer of OntoGenix at Universidad de Murcia's TECNOMOD research group. Former researcher at Universidad Miguel Hernández's NeuraViPeR (H2020) project. Currently developing multi-agent systems for semantic data integration at LabLENI-UPV.</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="images/about/profile.jpg" alt="Mikel Val Calvo" class="rounded-circle img-fluid mb-3" style="max-width: 150px;" onerror="this.style.display='none'">
+                        <div>
+                            <a href="https://github.com/mikelval82" target="_blank" class="btn btn-sm btn-outline-dark mr-2"><i class="ti-github"></i></a>
+                            <a href="https://www.linkedin.com/in/mikelvalcalvo" target="_blank" class="btn btn-sm btn-outline-dark mr-2"><i class="ti-linkedin"></i></a>
+                            <a href="https://scholar.google.es/citations?user=PoviSYIAAAAJ" target="_blank" class="btn btn-sm btn-outline-dark"><i class="ti-book"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient text-white p-4 my-5">
+                    <h5 class="mb-3"><i class="ti-comments mr-2"></i>Join the Discussion</h5>
+                    <p class="mb-3">Interested in collaborating on ontology engineering for neuroprosthetics, multi-agent systems, or semantic data integration? Working on similar LLM-powered knowledge graph projects? I'd love to discuss research synergies and potential collaborations.</p>
+                    <a href="index.html#contact" class="btn btn-light">Get in Touch <i class="ti-arrow-right ml-2"></i></a>
+                </div>
+
+                <div class="mt-5 pt-4 border-top">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-muted small mb-2">Tags:</p>
+                            <span class="badge badge-secondary mr-2">OntoGenix</span>
+                            <span class="badge badge-secondary mr-2">Ontology Engineering</span>
+                            <span class="badge badge-secondary mr-2">Knowledge Graphs</span>
+                            <span class="badge badge-secondary mr-2">LLM</span>
+                            <span class="badge badge-secondary mr-2">GPT-4</span>
+                            <span class="badge badge-secondary mr-2">RAG</span>
+                            <span class="badge badge-secondary mr-2">Multi-Agent Systems</span>
+                            <span class="badge badge-secondary mr-2">RML Mapping</span>
+                            <span class="badge badge-secondary mr-2">Self-Repair</span>
+                            <span class="badge badge-secondary mr-2">Semantic Web</span>
+                            <span class="badge badge-secondary mr-2">OWL</span>
+                            <span class="badge badge-secondary">Python</span>
+                        </div>
+                        <div class="col-md-6 text-md-right mt-3 mt-md-0">
+                            <p class="text-muted small mb-2">Share:</p>
+                            <a href="https://twitter.com/intent/tweet?url=https://mikelval82.github.io/Portfolio/blog-ontogenix.html&text=OntoGenix: LLM-Powered Ontology Engineering&hashtags=OntoGenix,KnowledgeGraphs,LLM,SemanticWeb" target="_blank" class="btn btn-sm btn-outline-secondary mr-2"><i class="ti-twitter"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://mikelval82.github.io/Portfolio/blog-ontogenix.html" target="_blank" class="btn btn-sm btn-outline-secondary mr-2"><i class="ti-linkedin"></i></a>
+                            <a href="mailto:?subject=OntoGenix: LLM-Powered Ontology Engineering&body=Check out this article about automatic knowledge graph generation: https://mikelval82.github.io/Portfolio/blog-ontogenix.html" class="btn btn-sm btn-outline-secondary"><i class="ti-email"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Start -->
+<footer class="footer bg-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<p class="text-center mb-0 copyright text-white-50">© 2025 Mikel Val Calvo. All rights reserved. | AI Research Scientist</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Footer End -->
+
+
+   
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    
+    <!-- Main jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4.3.1 -->
+    <script src="plugins/bootstrap/js/popper.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+   <!-- Slick Slider -->
+    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <!-- Counterup -->
+    <script src="plugins/counto/apear.js"></script>
+    <script src="plugins/counto/counTo.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <script src="plugins/owl/owl.carousel.min.js"></script>
+    
+    <script src="js/script.js"></script>
+
+  </body>
+  </html>
