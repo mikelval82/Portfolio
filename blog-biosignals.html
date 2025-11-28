@@ -90,8 +90,8 @@
             <div class="col-lg-9 col-md-12">
                 
                 <div class="mb-5">
-                    <img src="https://raw.githubusercontent.com/mikelval82/Biosignals/master/screenshots/main_window.png" alt="Biosignals software interface showing real-time physiological signal monitoring" class="img-fluid rounded shadow-lg" onerror="this.src='images/blog/biosignals-placeholder.jpg'">
-                    <p class="text-center text-muted mt-2 small">Biosignals software interface: Real-time monitoring of BVP, GSR, Temperature, and Accelerometer data</p>
+                    <img src="images/blog/BIOSIGNALS.png" alt="BIOSIGNALS software interface showing real-time physiological signal monitoring" class="img-fluid rounded shadow-lg">
+                    <p class="text-center text-muted mt-2 small">BIOSIGNALS software interface: Real-time monitoring of BVP, GSR, Temperature, and Accelerometer data with PyQt5 GUI</p>
                 </div>
 
                 <h2 class="mb-4">The Challenge: Synchronised Multi-Modal Physiological Data in Real-Time</h2>
@@ -132,6 +132,11 @@
                 <h2 class="mt-5 mb-4">System Architecture: Multi-Threaded Event-Driven Design</h2>
 
                 <p>BIOSIGNALS implements a <strong>multi-threaded event-driven architecture</strong> with strict separation of concerns to handle concurrent I/O, real-time visualisation, and remote control without race conditions.</p>
+
+                <div class="mb-4">
+                    <img src="images/blog/BIOSIGNALS_software_design.png" alt="BIOSIGNALS software architecture diagram" class="img-fluid rounded shadow">
+                    <p class="text-center text-muted mt-2 small">Software architecture: Multi-threaded design with state machine, data managers, ring buffers, and TCP/IP trigger server</p>
+                </div>
 
                 <div class="card bg-gray p-4 mb-4">
                     <h5 class="text-color mb-3">Architecture Overview</h5>
