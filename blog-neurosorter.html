@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="NeuroSorter-Interface: Advanced platform for spike sorting and neural signal cleaning. Combines UMAP, Louvain clustering, and template matching for robust, automated analysis of neural recordings. PyQt5 GUI for dynamic script management and visualisation.">
+  <meta name="keywords" content="neuroscience, spike sorting, neural signals, UMAP, Louvain, clustering, template matching, PyQt5, machine learning, Python">
+  <meta name="author" content="Mikel Val Calvo, PhD">
+  <title>NeuroSorter-Interface: Advanced Platform for Spike Sorting and Neural Signal Cleaning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <link rel="stylesheet" href="plugins/owl/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="plugins/owl/assets/owl.theme.default.min.css" >
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="portfolio" id="top">
+<nav class="navbar navbar-expand-lg bg-transprent py-4 fixed-top navigation" id="navbar">
+	<div class="container">
+	  <a class="navbar-brand" href="index.html">
+	  	<h2 class="logo">Mikel Val.</h2>
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="ti-view-list"></span>
+	  </button>
+	  <div class="collapse navbar-collapse text-center" id="navbarsExample09">
+			<ul class="navbar-nav mx-auto">
+			  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+			  <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+			  <li class="nav-item"><a class="nav-link" href="index.html#skillbar">Expertise</a></li>
+			  <li class="nav-item"><a class="nav-link" href="index.html#service">Services</a></li>
+			  <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+			  <li class="nav-item active"><a class="nav-link" href="index.html#blog">Blog <span class="sr-only">(current)</span></a></li>
+			  <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+			</ul>
+		  <ul class="list-inline mb-0 ml-lg-4 nav-social">
+			  <li class="list-inline-item"><a href="https://github.com/mikelval82" target="_blank"><i class="ti-github"></i></a></li>
+			  <li class="list-inline-item"><a href="https://www.linkedin.com/in/mikelvalcalvo" target="_blank"><i class="ti-linkedin"></i></a></li>
+			  <li class="list-inline-item"><a href="https://scholar.google.es/citations?user=PoviSYIAAAAJ" target="_blank"><i class="ti-book"></i></a></li>
+		  </ul>
+	  </div>
+	</div>
+</nav>
+<section class="page-title bg-gradient">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+          <div class="page-title text-center">
+             <p class="text-white-50">#NeuroSorter #Python #MachineLearning #SpikeSorting #NeuralSignals</p>
+              <h1 class="text-white">NeuroSorter-Interface: Advanced Platform for Spike Sorting and Neural Signal Cleaning</h1>
+              <p class="text-white-50 mt-3"><i class="ti-calendar mr-2"></i>28 November 2025 | <i class="ti-time ml-3 mr-2"></i>7 min read | <i class="ti-user ml-3 mr-2"></i>Mikel Val Calvo, PhD</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section portfolio-single pt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-md-12">
+                <div class="mb-5">
+                    <img src="https://github.com/mikelval82/NeuroSorter-Interface/blob/main/Images/GUI_overview.png?raw=true" alt="NeuroSorter Pipeline Diagram" class="img-fluid rounded shadow-lg">
+                    <p class="text-center text-muted mt-2 small">NeuroSorter-Interface: End-to-end spike sorting and cleaning pipeline for neural signals</p>
+                </div>
+                <h2 class="mb-4">1. Introduction & Context</h2>
+                <p class="lead">The analysis of neural signals is fundamental to understanding brain function and developing new therapies in neuroscience. The spike sorting process, which involves identifying and classifying action potentials (spikes) in extracellular recordings, is a key technical challenge for extracting relevant information from large volumes of data.</p>
+                <p>NeuroSorter-Interface emerges as a comprehensive solution for researchers and professionals, enabling efficient cleaning, classification, and visualisation of spikes through advanced algorithms and an intuitive graphical interface. The project connects directly with real neuroscience studies, facilitating the exploration and analysis of experimental data.</p>
+                <h2 class="mt-5 mb-4">2. The Technical Challenge</h2>
+                <p>The main challenge addressed was the automation and robustness of the spike sorting pipeline, dealing with artefacts, noise, and signal variability. Existing solutions tend to be inflexible, require manual intervention, or fail to integrate modern machine learning methods.</p>
+                <p>NeuroSorter-Interface resolves these limitations by combining dimensionality reduction algorithms (UMAP), clustering (Louvain), and reference templates, all accessible from a GUI that enables dynamic script management and advanced visualisation.</p>
+                <h2 class="mt-5 mb-4">3. The Solution: Architecture</h2>
+                <div class="card bg-dark text-white p-4 mb-4" style="background: #23272b;">
+                    <h5 class="mb-3"><i class="ti-layout-grid2 mr-2"></i>System Modules</h5>
+                    <ul class="mb-0">
+                        <li><strong>CLEANER:</strong> Detection and cleaning of artefacts and spikes using templates and clustering.</li>
+                        <li><strong>SORTER:</strong> Dimensionality reduction (UMAP) and clustering (Louvain) algorithms for automatic classification.</li>
+                        <li><strong>AUXILIAR_CODE:</strong> Auxiliary scripts for specific analyses (ISI, PSTH, raster, etc).</li>
+                        <li><strong>GUI:</strong> PyQt5 graphical interface for interaction, visualisation, and script management.</li>
+                        <li><strong>DYNAMIC:</strong> Dynamic loading and execution of customised scripts.</li>
+                    </ul>
+                </div>
+                <div class="mb-5">
+                    <img src="https://github.com/mikelval82/NeuroSorter-Interface/blob/main/Images/code_panel.png?raw=true" alt="Pipeline" class="img-fluid rounded shadow">
+                    <p class="text-center text-muted mt-2 small">Pipeline diagram: From raw waveforms to sorted neural units</p>
+                </div>
+                <h2 class="mt-5 mb-4">4. Featured Code</h2>
+                <h3 class="h4 mt-4 mb-3">Spike Cleaning and Clustering: A Hybrid Approach</h3>
+                <div class="card bg-dark text-white p-4 mb-4" style="background: #23272b;">
+                    <h6 class="mb-3">High-Level Architecture</h6>
+                    <pre class="bg-dark text-white p-3 rounded mb-0" style="font-size: 0.95em;">┌────────────────────────────────────────────────────────────────┐
+│                         Raw Waveforms                          │
+│  Input: N × 48 matrix (N spikes, 48 time samples each)        │
+│  Contains genuine spikes + noise + artefacts + outliers       │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                        Normalisation                           │
+│  Transform: x_norm = (x - min) / (max - min)                  │
+│  Purpose: Scale all waveforms to [0,1] range for consistent   │
+│           distance metrics across recordings with different    │
+│           amplitudes and baselines                             │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                      UMAP Reduction                            │
+│  Transform: ℝ⁴⁸ → ℝ² (48-dimensional → 2-dimensional)         │
+│  Algorithm: Uniform Manifold Approximation & Projection        │
+│  • Preserves local neighbourhood structure (n_neighbors)      │
+│  • Maintains global topology (min_dist)                       │
+│  • Manhattan distance metric for spike morphology             │
+│  Output: Low-dimensional embedding revealing spike clusters   │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                      Graph Building                            │
+│  Construction: k-NN graph from UMAP's fuzzy simplicial set    │
+│  • Nodes = individual waveforms                               │
+│  • Edges = similarity relationships (weighted)                │
+│  • Graph topology encodes manifold structure                  │
+│  Purpose: Prepare data structure for community detection      │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                    Louvain Clustering                          │
+│  Algorithm: Community detection via modularity optimisation   │
+│  • Iteratively merges nodes into communities                  │
+│  • Maximises within-cluster connections                       │
+│  • Minimises between-cluster connections                      │
+│  Output: Initial cluster labels (may contain noise clusters)  │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                    Template Matching                           │
+│  Validation: Compare cluster means against reference database │
+│  • 115 spike templates (validated neural signals)             │
+│  • 12 artefact templates (known noise patterns)               │
+│  Metrics: Spearman correlation, DTW distance, trend analysis  │
+│  Decision: Accept cluster if passes 5 quality criteria        │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                        Clean Spikes                            │
+│  Output: Binary labels (1 = valid spike, 0 = noise/artefact)  │
+│  Result: Filtered dataset ready for spike sorting             │
+└────────────────────────────────────────────────────────────────┘
+</pre>
+                </div>
+                <p><strong>Algorithm Summary</strong>: The pipeline transforms raw neural recordings through a multi-stage process: first normalising signal amplitudes, then projecting high-dimensional waveforms into a 2D manifold that reveals natural groupings, constructing a similarity graph to capture relationships, detecting communities of similar waveforms, and finally validating clusters against known spike and artefact templates. This hybrid approach combines unsupervised learning (UMAP + Louvain) with supervised validation (template matching) to achieve robust spike cleaning.</p>
+                <div class="card bg-dark text-white p-4 mb-4" style="background: #23272b;">
+                    <h6 class="mb-3">Validation Criteria</h6>
+                    <ul class="mb-0">
+                        <li><strong>Spearman correlation</strong> (ρ > 0.7): Shape similarity with templates</li>
+                        <li><strong>Trend analysis</strong>: Linear fit slope within [-2%, 3.5%]</li>
+                        <li><strong>DTW distance</strong> (< 6): Dynamic time warping for phase-space matching</li>
+                        <li><strong>Cluster stability</strong> (std < 0.6): Intra-cluster variability</li>
+                        <li><strong>Artefact exclusion</strong>: High correlation (> 0.95) with noise templates</li>
+                    </ul>
+                </div>
+                <h3 class="h4 mt-4 mb-3">Spike Sorting Pipeline: Unit Classification and Template Assignment</h3>
+                <div class="card bg-dark text-white p-4 mb-4" style="background: #23272b;">
+                    <h6 class="mb-3">High-Level Architecture</h6>
+                    <pre class="bg-dark text-white p-3 rounded mb-0" style="font-size: 0.95em;">┌────────────────────────────────────────────────────────────────┐
+│                      Clean Spikes (Input)                      │
+│  Input: M × 48 matrix (M validated spikes from cleaning)      │
+│  Status: Artefacts removed, only genuine neural activity      │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                    Temporal Windowing                          │
+│  Extract: Time samples [10:45] from 48-point waveforms        │
+│  Purpose: Focus on spike peak region, discard baseline noise  │
+│           • Reduces dimensionality (48 → 35 samples)          │
+│           • Removes pre/post-spike variability                │
+│  Output: M × 35 matrix with spike-relevant features           │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                        Normalisation                           │
+│  Transform: x_norm = (x - min) / (max - min)                  │
+│  Purpose: Standardise amplitude variations across units       │
+│           • Different neurons have different amplitudes       │
+│           • Ensures morphology-based (not amplitude) sorting  │
+│  Output: Normalised waveforms in [0,1] range                  │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                      UMAP Reduction                            │
+│  Transform: ℝ³⁵ → ℝ² (35-dimensional → 2-dimensional)         │
+│  Adaptive n_neighbors: min(n_neighbors, ceil(M/n_neighbors))  │
+│  • Handles variable dataset sizes automatically               │
+│  • Preserves spike morphology relationships                   │
+│  • Manhattan metric optimal for temporal waveform features    │
+│  Output: 2D embedding where similar units cluster together    │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                      Graph Construction                        │
+│  Build: Weighted k-NN graph from UMAP fuzzy simplicial set   │
+│  • Edge weights = similarity between spike pairs              │
+│  • Graph structure reveals unit boundaries                    │
+│  Purpose: Transform geometric embedding into network problem  │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                    Louvain Clustering                          │
+│  Algorithm: Modularity-based community detection              │
+│  Resolution parameter: 1.1 (balanced granularity)             │
+│  • Higher resolution → more clusters (conservative splitting) │
+│  • Produces initial unit labels (Unit 1, Unit 2, ...)        │
+│  Output: Preliminary unit assignments (pre-refinement)        │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                    Template Matching                           │
+│  Database: 115 pre-validated spike templates                  │
+│  For each detected unit:                                      │
+│    1. Compute unit mean waveform                              │
+│    2. Transform to phase space: [waveform, derivative]        │
+│    3. Calculate DTW distance to all 115 templates             │
+│    4. Assign to closest template (minimum DTW distance)       │
+│  Purpose: Map discovered units to canonical spike morphologies│
+│  Output: Refined unit IDs based on template library           │
+└────────────────────┬───────────────────────────────────────────┘
+                     │
+                     ▼
+┌────────────────────────────────────────────────────────────────┐
+│                      Sorted Units (Output)                     │
+│  Output: Integer array of unit labels (0-114)                 │
+│  Result: Each spike assigned to specific neural unit          │
+│  Format: [Unit_23, Unit_45, Unit_23, Unit_12, ...]           │
+└────────────────────────────────────────────────────────────────┘
+</pre>
+                </div>
+                <p><strong>Algorithm Summary</strong>: The sorting pipeline operates on pre-cleaned spikes, first extracting the most informative temporal region and normalising amplitudes. UMAP projects waveforms into a low-dimensional space where morphologically similar spikes cluster naturally. Louvain clustering then identifies these groups as putative neural units. Finally, template matching refines unit identities by comparing each cluster's mean waveform against 115 canonical spike shapes using Dynamic Time Warping in phase space. This two-stage approach (unsupervised discovery + supervised assignment) enables both novel unit detection and consistent labelling across recordings.</p>
+                <div class="card bg-dark text-white p-4 mb-4" style="background: #23272b;">
+                    <h6 class="mb-3">Key Innovation</h6>
+                    <ul class="mb-0">
+                        <li>Uses <strong>phase-space DTW</strong> (waveform + derivative) for template matching</li>
+                        <li>Robust to temporal shifts and amplitude variability</li>
+                        <li>Precise discrimination between morphologically similar units</li>
+                    </ul>
+                </div>
+                <div class="alert bg-gray border-0 mt-4">
+                    <h6 class="text-white mb-2"><i class="ti-book mr-2"></i>Additional Resources</h6>
+                    <ul class="text-white-50 small mb-0">
+                        <li><a href="./README.md" target="_blank" class="text-white-50">Project README</a> — Full documentation and usage examples</li>
+                        <li><a href="https://github.com/mikelval82/NeuroSorter-Interface" target="_blank" class="text-white-50">GitHub Repository</a> — Source code and releases</li>
+                        <li><a href="https://github.com/mikelval82/NeuroSorter-Interface/tree/main/AUXILIAR_CODE" target="_blank" class="text-white-50">AUXILIAR_CODE scripts</a> — Advanced analyses (ISI, PSTH, raster)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer bg-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<p class="text-center mb-0 copyright text-white-50">© 2025 Mikel Val Calvo. All rights reserved. | AI Research Scientist</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/bootstrap/js/popper.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="plugins/slick-carousel/slick/slick.min.js"></script>
+<script src="plugins/counto/apear.js"></script>
+<script src="plugins/counto/counTo.js"></script>
+<script src="plugins/aos/aos.js"></script>
+<script src="plugins/owl/owl.carousel.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
