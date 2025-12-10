@@ -396,21 +396,40 @@ a:hover, a:focus {
 
 #service .card {
   transition: all .35s ease;
-  background: #19273e;
+  background: transparent;
 }
 
 #service .card h3 {
   transition: all .35s ease;
-  opacity: .9;
+  opacity: 1;
+  color: #fff;
+}
+
+#service .card i {
+  transition: all .35s ease;
+  color: #e1a34c !important;
+}
+
+#service .card p {
+  transition: all .35s ease;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 #service .card:hover {
-  border-bottom-color: #e1a34c;
-  background: transparent;
+  border-bottom-color: #90df8d;
+  background: #b6e09e;
 }
 
 #service .card:hover h3 {
-  color: #e1a34c;
+  color: #19273e;
+}
+
+#service .card:hover i {
+  color: #19273e !important;
+}
+
+#service .card:hover p {
+  color: #19273e;
 }
 
 .portfolio-item:before {
