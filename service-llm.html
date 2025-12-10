@@ -58,7 +58,7 @@
       <div class="col-lg-8">
           <div class="page-title text-center">
              <p>Artificial Intelligence</p>
-              <h1>LLM-Powered Solutions</h1>
+              <h1>Real‑Time LLM Systems</h1>
           </div>
       </div>
     </div>
@@ -70,7 +70,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="service-content">
-                    <p class="lead mt-4 mb-5">Development of intelligent systems using state-of-the-art language models (LLMs), RAG (Retrieval-Augmented Generation) techniques, ReAct agents, and fine-tuning for domain-specific applications.</p>
+                    <p class="lead mt-4 mb-5">Design and deployment of production‑ready LLM systems for hospitals and public institutions (RAG, agents, real‑time voice).</p>
 
                     <div class="row">
                         <div class="col-lg-6 mb-4">
@@ -91,6 +91,75 @@
                         </div>
                     </div>
 
+                    <h3 class="mt-5 mb-4">Featured Projects</h3>
+
+                    <div class="card bg-gray p-4 mb-4">
+                        <h5 class="mb-3">🏥 ASISVIA — Case study (Hospitales Universitarios San Roque, CDTI PAIS-20241015)</h5>
+                        <ul class="mb-2">
+                            <li><strong>Context / Client:</strong> Hospitales Universitarios San Roque — patient experience surveys in production (CDTI project)</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Problem:</strong>
+                                <ul>
+                                    <li>Need scalable, empathetic patient interviews with automated mood & satisfaction analysis</li>
+                                    <li>Reduce manual post-hoc processing of free-text/voice survey responses</li>
+                                </ul>
+                            </li>
+                            <li><strong>Solution / Architecture:</strong>
+                                <ul>
+                                    <li>LangGraph-based StateGraph conversational workflow with SessionContext for isolated multi-room management</li>
+                                    <li>LiveKit WebRTC audio streaming → Whisper STT → GPT-4o-mini for empathetic logic → ElevenLabs TTS for natural voice</li>
+                                    <li>Hybrid templated & generative modes to control cost and behaviour (templated = deterministic, low-cost; generative = adaptive follow-ups)</li>
+                                    <li>Voice analysis module for real-time satisfaction/mood extraction + PostgreSQL checkpoints for audit & resume</li>
+                                </ul>
+                            </li>
+                            <li><strong>Impact / Status:</strong>
+                                <ul>
+                                    <li>Supports concurrent multi-room sessions in hospital environments; deployed for patient experience surveys</li>
+                                    <li>Designed to reduce manual analysis and provide timely emotional‑wellbeing insights to clinical staff</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-gray p-4 mb-4">
+                        <h5 class="mb-3">🏙️ CityVerse — Case study</h5>
+                        <ul class="mb-2">
+                            <li><strong>Context / Client:</strong> Supports EU officers evaluating urban designs inside VR environments</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><strong>Problem:</strong>
+                                <ul>
+                                    <li>Need structured, repeatable evaluation workflows for VR-based design reviews</li>
+                                    <li>Ensure objective, comparable feedback across reviewers and sessions</li>
+                                </ul>
+                            </li>
+                            <li><strong>Solution / Architecture:</strong>
+                                <ul>
+                                    <li>Multi-stage structured evaluation workflow orchestrated by a finite state automaton</li>
+                                    <li>CityBot agent (GPT-4o) for domain-guided questioning and summarisation</li>
+                                    <li>Socket.IO real-time integration with Unity/web clients + ElevenLabs TTS for voice interaction</li>
+                                    <li>Result export for comparative analysis and policy reporting</li>
+                                </ul>
+                            </li>
+                            <li><strong>Impact / Status:</strong>
+                                <ul>
+                                    <li>Enables consistent, auditable VR-based evaluations used by decision-makers</li>
+                                    <li>Prototype validated in pilot sessions; designed for scale and repeatability</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3 class="mt-5 mb-4">Work Methodology</h3>
+                    <ol class="lead">
+                        <li><strong>Requirements Analysis:</strong> Precise identification of problem and project objectives</li>
+                        <li><strong>Architecture Design:</strong> Selection of appropriate models, vectorstores, and frameworks</li>
+                        <li><strong>Iterative Implementation:</strong> Development with continuous testing and prompt adjustment</li>
+                        <li><strong>Evaluation:</strong> Performance metrics (accuracy, latency, costs) and reliability (error handling, logging, monitoring)</li>
+                        <li><strong>Deployment:</strong> Production deployment with observability and incident response procedures</li>
+                    </ol>
+
                     <h3 class="mt-5 mb-4">Featured Research</h3>
 
                     <div class="card bg-gray p-4 mb-4">
@@ -100,46 +169,6 @@
                             <i class="ti-link mr-2"></i>View full publication →
                         </a>
                     </div>
-
-                    <h3 class="mt-5 mb-4">Featured Projects</h3>
-
-                    <div class="card bg-gray p-4 mb-4">
-                        <h5 class="mb-3">🏥 ASISVIA - Healthcare Improvement through AI, Virtual Humans, and Natural Interfaces (PAIS-20241015, 2025-2026)</h5>
-                        <p class="mb-2"><strong>Public-Private Partnership:</strong> LabLENI (UPV) + Hospitales Universitarios San Roque | <strong>Funded by:</strong> Centro para el Desarrollo Tecnológico Industrial (CDTI), Grant nº PAIS-20241015</p>
-                        <p class="mb-2">Development and research of healthcare improvement models through automatic patient experience processing. Advanced conversational agent for clinical interviews combining empathetic virtual assistants, voice analysis AI, and natural interfaces. The system conducts structured questionnaires with empathetic voice interaction, extracting satisfaction and mood indicators from patients' voices to offer personalised solutions for improving emotional well-being.</p>
-                        <ul class="list-unstyled">
-                            <li><strong>Architecture:</strong> LangGraph StateGraph with hybrid templated/generative modes, SessionContext for isolated multi-room state management, empathetic and responsive virtual assistant</li>
-                            <li><strong>Technologies:</strong> LiveKit WebRTC (audio streaming), OpenAI GPT-4o-mini (empathetic follow-ups and personalised farewells), Whisper STT, ElevenLabs TTS for natural voice synthesis</li>
-                            <li><strong>Voice Analysis AI:</strong> Automatic extraction of satisfaction and mood indicators from patient voice, real-time sentiment analysis, psychological insights detection whilst maintaining therapeutic rapport</li>
-                            <li><strong>Intelligent Workflow:</strong> Automatic detection of low-satisfaction answers (≤2/5) triggering empathetic LLM-generated follow-up questions, switching dynamically between templated (fast, low-cost) and generative modes</li>
-                            <li><strong>Patient Experience Features:</strong> Non-interruptible sessions for structured questionnaires, personalised closing summary mentioning key concerns, PostgreSQL checkpoint persistence, concurrent multi-user support in hospital environments</li>
-                            <li><strong>Healthcare Application:</strong> Hospital patient experience surveys at Hospitales Universitarios San Roque, automatic processing of patient feedback, personalised emotional well-being solutions</li>
-                            <li><strong>Innovation:</strong> First integrated system combining virtual humans with automatic voice-based mood analysis for healthcare improvement, custom LLM adapter integrating LangGraph with LiveKit, cost-optimised hybrid approach (templated questions $0 tokens), guaranteed participant management with robust cleanup</li>
-                        </ul>
-                    </div>
-
-                    <div class="card bg-gray p-4 mb-4">
-                        <h5 class="mb-3">🏙️ CityVerse - AI Conversational Assistant for Urban Design Evaluation</h5>
-                        <p class="mb-2">Intelligent conversational platform designed to assist European Commission officers in evaluating urban design proposals within virtual environments. The system integrates expert AI agents with finite state automata for structured dialogue management.</p>
-                        <ul class="list-unstyled">
-                            <li><strong>CityBot Agent:</strong> Expert urban planning assistant powered by OpenAI GPT-4o, guiding users through comprehensive design evaluations with domain-specific expertise</li>
-                            <li><strong>Technologies:</strong> OpenAI GPT-4o, ElevenLabs TTS for voice synthesis, Socket.IO for real-time communication, mpv for audio streaming</li>
-                            <li><strong>Dialogue Automation:</strong> Finite state automaton managing conversational flow and transitions between evaluation stages (closed questions, open discussions, comparisons, final summaries)</li>
-                            <li><strong>Real-time Integration:</strong> Socket.IO server enabling seamless communication with external clients (Unity, web applications) for interactive urban planning scenarios</li>
-                            <li><strong>Voice Interaction:</strong> Natural voice-based interaction through text-to-speech synthesis with real-time audio streaming capabilities</li>
-                            <li><strong>Structured Assessment:</strong> Systematic evaluation framework covering closed questions, open-ended discussions, comparative analysis, and comprehensive final summaries of urban design proposals</li>
-                            <li><strong>Use Case:</strong> Supporting EU policy makers in assessing virtual urban environments, facilitating structured feedback collection and design comparison</li>
-                        </ul>
-                    </div>
-
-                    <h3 class="mt-5 mb-4">Work Methodology</h3>
-                    <ol class="lead">
-                        <li><strong>Requirements Analysis:</strong> Precise identification of problem and project objectives</li>
-                        <li><strong>Architecture Design:</strong> Selection of appropriate models, vectorstores, and frameworks</li>
-                        <li><strong>Iterative Implementation:</strong> Development with continuous testing and prompt adjustment</li>
-                        <li><strong>Evaluation:</strong> Performance metrics (accuracy, latency, costs)</li>
-                        <li><strong>Deployment:</strong> Production deployment with monitoring and logging</li>
-                    </ol>
                 </div>
             </div>
 
