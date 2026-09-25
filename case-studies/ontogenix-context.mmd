@@ -1,0 +1,17 @@
+flowchart TD
+    CSV[CSV] --> PROFILE[Resumen estadístico JSON]
+    TASK[Petición del usuario] --> PLAN[PlanSage: esquema inicial]
+    PROFILE --> PLAN
+    PLAN --> LINKS[PlanSage: interoperabilidad]
+    SEARCH[Resultados de Schema.org] --> LINKS
+    LINKS -->|answer actual| BUILD[OntoBuilder]
+    PROFILE --> BUILD
+    BUILD --> PARSE[Parseo RDF]
+    PARSE -->|error y salida previa; intentos limitados| BUILD
+    BUILD -->|ontología: ruta normal| MAP[OntoMapper]
+    LINKS -.->|descripción: ruta alternativa| MAP
+    CSV -->|ruta del archivo| MAP
+    MAP -->|RML| KGEN[KGen y Morph-KGC]
+    CSV --> KGEN
+    KGEN --> NT[N-Triples]
+    KGEN -.->|feedback en una nueva petición| MAP
